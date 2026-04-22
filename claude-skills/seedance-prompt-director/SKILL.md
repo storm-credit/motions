@@ -63,6 +63,8 @@ Use 3-5 shots for 4-8s, 6-9 shots for 9-12s, and 8-12 shots for 13-15s.
 
 ### 4. Final Seedance Prompt Block
 
+The final output must be a fully filled packet, not an outline. Resolve every field concretely from the user's brief, references, or stated defaults.
+
 Output in this order:
 
 ```text

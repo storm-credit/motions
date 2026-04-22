@@ -30,13 +30,23 @@ STYLE
 - Texture:
 - Atmosphere:
 
+=== CINEMATIC DIRECTION ===
+
+- Hook image:
+- Action progression:
+- Camera behavior:
+- Texture and atmosphere:
+- Sound or implied audio:
+- Ending image:
+- Continuity bridge:
+
 ENDING IMAGE
 - Pose:
 - Camera:
 - Light:
 - Props:
 
-NEGATIVE
+NEGATIVE / AVOID
 - No continuity drift.
 - No wardrobe change.
 - No location/time jump.
@@ -50,4 +60,16 @@ Version A:
 
 Version B:
 [optional alternate]
+
+Version B rule:
+- Change camera/style/emphasis only; do not change canon locks.
+
+=== CONTINUITY AUDIT ===
+
+- Version A practical and copy/paste usable?
+- Version B preserves canon locks?
+- Character, wardrobe, and location unchanged?
+- Camera and action physically readable?
+- Ending image bridges to next shot?
+- No vague filler replacing concrete action?
 ```

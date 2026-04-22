@@ -64,10 +64,43 @@ SHOT 1 ([time]) - [name]
 - Audio:
 - Ending state:
 
+SHOT 2 ([time]) - [name]
+- Continuity anchor from SHOT 1:
+- Action:
+- Camera:
+- Effects:
+- Audio:
+- Ending state:
+
+SHOT N ([time]) - [name]
+- Continue the same schema.
+- Every shot must inherit the previous shot's ending state unless a motivated transition is stated.
+
 === FINAL PROMPT ===
 
+SEGMENT 1 ([time range])
+
 [Korean Block]
+- Technical parameters:
+- Audio 3-layer:
+- Scene prompts:
+- Negative prompt:
+- Speed / Camera / Transitions / Optical:
+- Effects density map:
+- Exact ending state / next segment bridge:
+
 [English Block if useful]
+- Technical parameters:
+- Audio 3-layer:
+- Scene prompts:
+- Negative prompt:
+- Speed / Camera / Transitions / Optical:
+- Effects density map:
+- Exact ending state / next segment bridge:
+
+SEGMENT 2 ([time range], if needed)
+- Start from Segment 1 exact ending state.
+- Repeat the full prompt block.
 
 === CONTINUITY AUDIT ===
 - Character:
@@ -78,4 +111,5 @@ SHOT 1 ([time]) - [name]
 - Audio:
 - Hook:
 - Prompt load:
+- Continuity load:
 ```

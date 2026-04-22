@@ -41,10 +41,86 @@ NEGATIVE CONSTRAINTS
 
 === SHOT / EXTENSION PLAN ===
 
+Every extension must begin from the previous clip's ending pose, camera position, light state, and motion direction.
+
+=== KLING MODEL-READY PROMPTS ===
+
 SHOT 1
+- Purpose:
 - Input mode:
-- Prompt:
-- Negative prompt:
+- Aspect ratio:
+- Duration:
+- Subject lock:
+- Element lock:
+- Action:
+- Camera:
+- Motion continuity:
 - End state:
+- Negative prompt:
 - Next step:
+
+SHOT 2 / EXTENSION
+- Purpose:
+- Input mode:
+- Aspect ratio:
+- Duration:
+- Starts from previous end state:
+- Subject lock:
+- Element lock:
+- Action:
+- Camera:
+- Motion continuity:
+- End state:
+- Negative prompt:
+- Next step:
+
+=== MOTION CONTROL HANDOFF ===
+
+Source motion:
+- What video provides:
+- Exact motion to transfer:
+- What to ignore:
+
+Target image/subject:
+- Character:
+- Wardrobe:
+- Props:
+- Background:
+
+Transfer rules:
+- Preserve:
+- Adapt:
+- Do not change:
+
+Expected result:
+- Start pose:
+- End pose:
+- Camera behavior:
+
+=== EDIT HANDOFF ===
+
+Source clip:
+- What is already good:
+- What must be fixed:
+
+Edit instruction:
+- Replace:
+- Preserve:
+- Avoid:
+
+Continuity lock:
+- Character:
+- Wardrobe:
+- Light:
+- Camera:
+- Props:
+
+=== CONTINUITY AUDIT ===
+
+- Same subject and wardrobe?
+- Motion path physically continuous?
+- Start state matches previous end state?
+- End state specific enough for extension?
+- Camera axis preserved?
+- Motion Control/Edit used only when justified?
 ```

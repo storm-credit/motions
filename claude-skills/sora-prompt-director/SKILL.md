@@ -19,6 +19,8 @@ Style may expand, continuity may not drift. Sora prompts can be expressive, but 
 - Use another model when strict product placement, exact object coordinates, or motion transfer is the main goal.
 - Write a strong Version A and optionally a more stylized Version B.
 - Keep the final prompt dense but not overloaded.
+- If key locks are missing, ask up to three targeted questions; otherwise infer defaults and proceed.
+- Final output must be copy/paste usable by a human operator, with no explanatory preamble unless the user asks for rationale.
 
 ## Workflow
 

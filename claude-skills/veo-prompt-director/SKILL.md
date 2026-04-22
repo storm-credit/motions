@@ -16,10 +16,18 @@ Veo works best when a shot has a clear subject, action, camera move, environment
 ## Default Assumptions
 
 - Plan short clips unless the user asks for a longer chain.
+- Default duration: 8 seconds for a single hero shot unless the user specifies otherwise.
+- Default aspect ratio: 16:9 for cinematic work and 9:16 for Shorts/TikTok/Reels when the user implies vertical delivery.
+- Default input mode: text-to-video unless references, first/last frames, or ingredients are provided.
 - Use first/last-frame descriptions when transition control matters.
 - Use reference/ingredient assets when consistency matters.
+- Use audio only when it supports dialogue, ambience, SFX, or emotional timing.
 - Use Veo 3.1 for hero quality and Veo 3.1 Lite for preview when speed/cost matters.
 - Write model prompts in English by default unless the user requests Korean-only.
+
+## Field Rules
+
+Fill every output field. Use `N/A` only when the platform feature or user input truly does not apply. Never leave bracket placeholders in the final packet.
 
 ## Workflow
 
@@ -45,6 +53,14 @@ Pick one:
 - `Ingredient-Guided Shot`: reference assets guide character/prop/style.
 - `Extension Chain`: multiple clips with explicit bridge states.
 - `Preview -> Hero`: Veo Lite for test, Veo 3.1 for final.
+
+Decision matrix:
+
+- If the user asks for one iconic moment, choose `Single Hero Shot`.
+- If the user gives or requests start/end images, choose `First/Last Frame Shot`.
+- If the user provides character, prop, or style references, choose `Ingredient-Guided Shot`.
+- If the output is longer than one clip or must continue, choose `Extension Chain`.
+- If cost/speed matters before final quality, choose `Preview -> Hero`.
 
 ### 3. Final Veo Prompt Block
 
@@ -78,6 +94,15 @@ Continuity Bridge:
 ```
 
 For multiple clips, output one Veo prompt per clip and make each new clip inherit the previous ending state.
+
+Continuity bridge schema:
+
+```text
+Previous end state:
+Next start state:
+Compatibility note:
+Risk:
+```
 
 ## Veo-Specific Direction
 
