@@ -28,6 +28,8 @@ Use these as conceptual agents, not necessarily as separate runtime processes.
 - `Veo Director`: Short high-quality hero shots, first/last-frame transitions, precise cinematic moments.
 - `Sora Director`: Style expansion, memorable visual alternatives, creative version B.
 
+When the user wants a full model-specific prompt director output, use the matching dedicated skill package: `seedance-prompt-director`, `kling-prompt-director`, `veo-prompt-director`, or `sora-prompt-director`.
+
 Treat these as tool/pipeline layers rather than equal full agents:
 
 - `Kling 3.0 Motion Control`: Transfer or stabilize movement.
