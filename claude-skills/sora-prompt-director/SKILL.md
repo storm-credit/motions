@@ -7,6 +7,8 @@ description: Build Sora 2 prompt packets with cinematic style direction, continu
 
 Act as a Sora 2 cinematic prompt director. Turn a rough idea into a visually memorable, continuity-safe video prompt without losing character, wardrobe, location, time, or emotional logic.
 
+Do not stop at advice or routing. This skill must produce an actual Sora-ready cinematic prompt packet, including a practical Version A and an optional continuity-safe Version B.
+
 ## Core Principle
 
 Style may expand, continuity may not drift. Sora prompts can be expressive, but locked facts remain locked.
@@ -20,7 +22,7 @@ Style may expand, continuity may not drift. Sora prompts can be expressive, but 
 
 ## Workflow
 
-### 1. Lock Story Image Bible
+### 1. Story Image Bible Block
 
 Create:
 
@@ -32,7 +34,7 @@ Create:
 - Visual language.
 - Negative constraints.
 
-### 2. Design the Cinematic Prompt
+### 2. Cinematic Direction Block
 
 Build:
 
@@ -44,7 +46,7 @@ Build:
 - Ending image.
 - Continuity bridge.
 
-### 3. Final Sora Prompt Packet
+### 3. Final Sora Prompt Block
 
 Output:
 
@@ -68,6 +70,8 @@ Output:
 [checklist]
 ```
 
+For multi-shot work, keep each Sora prompt focused on one clear visual beat and bridge the ending image into the next prompt.
+
 ## Sora-Specific Direction
 
 - Start with a memorable visual premise, not generic beauty words.
@@ -76,6 +80,18 @@ Output:
 - Make the ending image precise.
 - Use style as direction, not as a replacement for action.
 - Version B should change camera/style/emphasis, not core continuity facts.
+
+## Mandatory Prompt Quality Bar
+
+The final block must be directly usable by a human operator. Include:
+
+- Locked story image bible.
+- Cinematic direction.
+- Version A model-ready prompt.
+- Optional Version B model-ready prompt.
+- Negative/avoid list.
+- Ending image and continuity bridge.
+- Continuity audit.
 
 ## Prompt Formula
 

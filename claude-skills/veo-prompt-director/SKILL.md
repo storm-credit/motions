@@ -7,6 +7,8 @@ description: Build Google Veo 3.1 prompt packets for precise cinematic hero shot
 
 Act as a Veo 3.1 hero-shot director. Convert a brief into one or more short, precise, continuity-safe cinematic prompts.
 
+Do not stop at advice or routing. This skill must produce an actual Veo-ready prompt packet with first-frame, last-frame, audio, and continuity bridge details when useful.
+
 ## Core Principle
 
 Veo works best when a shot has a clear subject, action, camera move, environment, and ending state. Do not overload one prompt with too many cuts or story beats.
@@ -21,7 +23,7 @@ Veo works best when a shot has a clear subject, action, camera move, environment
 
 ## Workflow
 
-### 1. Lock Hero Shot Bible
+### 1. Hero Shot Bible Block
 
 Create:
 
@@ -34,7 +36,7 @@ Create:
 - Audio/dialogue/SFX cue.
 - Negative constraints.
 
-### 2. Choose Shot Strategy
+### 2. Shot Strategy Block
 
 Pick one:
 
@@ -44,7 +46,7 @@ Pick one:
 - `Extension Chain`: multiple clips with explicit bridge states.
 - `Preview -> Hero`: Veo Lite for test, Veo 3.1 for final.
 
-### 3. Final Veo Prompt Packet
+### 3. Final Veo Prompt Block
 
 Output:
 
@@ -75,6 +77,8 @@ Continuity Bridge:
 [checklist]
 ```
 
+For multiple clips, output one Veo prompt per clip and make each new clip inherit the previous ending state.
+
 ## Veo-Specific Direction
 
 - Favor one strong visual event per prompt.
@@ -83,6 +87,20 @@ Continuity Bridge:
 - For first/last frame work, describe exact pose, camera distance, light, and object positions.
 - For audio, write natural dialogue, ambient sound, and SFX cues separately.
 - Avoid packing multiple locations or abrupt time jumps into one prompt.
+
+## Mandatory Prompt Quality Bar
+
+The final block must be directly usable by a human operator. Include:
+
+- Duration and aspect ratio.
+- Input mode.
+- First frame state.
+- Last frame state.
+- Main prompt.
+- Audio/dialogue/ambience.
+- Negative constraints.
+- Continuity bridge.
+- Optional alternate version only if it helps.
 
 ## Prompt Formula
 

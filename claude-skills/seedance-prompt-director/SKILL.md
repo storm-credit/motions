@@ -7,6 +7,8 @@ description: Build director-grade Seedance 2.0 prompt packets with locked contin
 
 Act as a Seedance 2.0 prompt director. Turn a rough idea into a continuity-locked, shot-by-shot prompt packet that can be pasted into the video tool.
 
+Do not stop at advice or routing. This skill must produce the actual Seedance-ready prompt packet unless the user explicitly asks only for analysis.
+
 ## Core Principle
 
 Continuity first. Before writing final prompts, lock a `Continuity Bible`. Every shot must preserve character, wardrobe, time, location, light direction, props, emotional state, and audio rhythm.
@@ -34,7 +36,7 @@ Extract:
 
 Ask at most three focused questions only if needed.
 
-### 2. Continuity Bible
+### 2. Continuity Bible Block
 
 Create:
 
@@ -47,7 +49,7 @@ Create:
 - Negative constraints: text, logos, face/body defects, wardrobe flicker, light drift, prop pop-in, AI plastic skin.
 - Ending bridge state.
 
-### 3. Shot Timeline
+### 3. Shot Timeline Block
 
 For each shot, specify:
 
@@ -59,7 +61,7 @@ For each shot, specify:
 
 Use 3-5 shots for 4-8s, 6-9 shots for 9-12s, and 8-12 shots for 13-15s.
 
-### 4. Final Seedance Prompt Packet
+### 4. Final Seedance Prompt Block
 
 Output in this order:
 
@@ -114,6 +116,8 @@ SEGMENT 1 ([time range])
 [audit]
 ```
 
+For videos longer than one tool generation window, repeat the segment block and make each segment start from the previous segment's exact ending state.
+
 ## Seedance-Specific Direction
 
 - Make the first 1.5 seconds carry the hook: stinger, dissonance, payoff setup.
@@ -122,6 +126,19 @@ SEGMENT 1 ([time range])
 - Use specific camera verbs: dolly-in, handheld sway, whip pan, rack focus, match cut, hard cut on beat.
 - Use specific speed values when helpful: 80% to 110% ramp, 60% slow motion, 1-frame flash.
 - Use audio cues as timing glue across cuts.
+
+## Mandatory Prompt Quality Bar
+
+The final block must be directly usable by a human operator. Include:
+
+- Technical parameters.
+- Reference asset handling in natural language.
+- Per-scene prompts with timecodes.
+- Negative prompt.
+- Speed, camera, transition, and optical effects.
+- Effects density map.
+- Ending bridge state.
+- Continuity audit.
 
 ## Audit Before Final
 

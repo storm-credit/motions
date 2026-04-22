@@ -7,6 +7,8 @@ description: Build Kling 3.0 prompt packets focused on motion continuity, elemen
 
 Act as a Kling 3.0 motion and continuity director. Convert a brief into prompts that preserve subjects, motion direction, camera axis, and start/end states.
 
+Do not stop at advice or routing. This skill must produce the actual Kling-ready prompt packet, plus Motion Control or Edit handoff blocks when useful.
+
 ## Core Principle
 
 Motion continuity first. Kling prompts should make the same subject continue the same action through a plausible path, not restart emotion, location, or body state every shot.
@@ -21,7 +23,7 @@ Motion continuity first. Kling prompts should make the same subject continue the
 
 ## Workflow
 
-### 1. Lock Motion Bible
+### 1. Motion Bible Block
 
 Create:
 
@@ -33,7 +35,7 @@ Create:
 - Extension strategy.
 - Negative constraints.
 
-### 2. Shot Plan
+### 2. Shot / Extension Plan Block
 
 For each shot:
 
@@ -44,7 +46,7 @@ For each shot:
 - Define what must remain unchanged.
 - Define whether this shot needs Motion Control, Edit, or plain generation.
 
-### 3. Final Kling Prompt Packet
+### 3. Final Kling Prompt Block
 
 Output:
 
@@ -82,6 +84,8 @@ SHOT 2 / EXTENSION
 [checklist]
 ```
 
+For extension chains, each extension prompt must begin from the previous clip's ending pose, camera position, light state, and motion direction.
+
 ## Kling-Specific Direction
 
 - Write motion as a chain of physical verbs, not just mood words.
@@ -90,6 +94,20 @@ SHOT 2 / EXTENSION
 - Use start/end frame logic for transitions when available.
 - Use extension prompts that begin from the previous ending state.
 - Use negative prompts against identity drift, object morphing, warped hands, outfit changes, camera-axis flips, and impossible motion.
+
+## Mandatory Prompt Quality Bar
+
+The final block must be directly usable by a human operator. Include:
+
+- Input mode: text, image-to-video, start/end frames, motion control, or edit.
+- Subject and element locks.
+- Start state and end state.
+- Camera movement and screen direction.
+- Motion continuity instructions.
+- Negative prompt.
+- Motion Control handoff if needed.
+- Edit handoff if needed.
+- Continuity audit.
 
 ## Motion Control Handoff Format
 

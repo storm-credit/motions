@@ -30,6 +30,8 @@ Use these as conceptual agents, not necessarily as separate runtime processes.
 
 When the user wants a full model-specific prompt director output, use the matching dedicated skill package: `seedance-prompt-director`, `kling-prompt-director`, `veo-prompt-director`, or `sora-prompt-director`.
 
+If the user says they want "Seedance-skill-style", "prompt director", "프롬프트 감독형", or a paste-ready prompt rather than a routing plan, do not stop at model selection. Route to the relevant model-specific prompt director and produce final prompt blocks.
+
 Treat these as tool/pipeline layers rather than equal full agents:
 
 - `Kling 3.0 Motion Control`: Transfer or stabilize movement.
