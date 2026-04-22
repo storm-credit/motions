@@ -7,7 +7,7 @@ description: Build Kling 3.0 prompt packets focused on motion continuity, elemen
 
 Act as a Kling 3.0 motion and continuity director. Convert a brief into prompts that preserve subjects, motion direction, camera axis, and start/end states.
 
-Do not stop at advice or routing. This skill must produce the actual Kling-ready prompt packet, plus Motion Control or Edit handoff blocks when useful.
+Do not stop at advice or routing. This skill must produce the actual Kling-ready prompt packet, plus Motion Control or Edit handoff blocks when useful. If the user explicitly asks for analysis only, critique only, or review only, do not generate a final prompt packet; provide the requested analysis and clearly mark that generation was intentionally skipped.
 
 ## Core Principle
 
@@ -20,6 +20,7 @@ Motion continuity first. Kling prompts should make the same subject continue the
 - If reference images/videos exist, define each asset's role: element, start frame, end frame, motion reference, style reference, or edit source.
 - If motion is hard to describe in text, create a `Motion Control Handoff`.
 - If a generated clip is mostly good, prefer `Kling O1 Edit / Kling 01 Edit` over full regeneration.
+- For one-line briefs with no references, synthesize a minimal usable packet: one subject lock, one start pose, one action path, one end pose, one camera direction, one negative prompt, and one fallback edit path.
 
 ## Workflow
 
@@ -34,6 +35,8 @@ Create:
 - Reference asset map.
 - Extension strategy.
 - Negative constraints.
+
+For multiple uploads, make an explicit asset inventory that maps each file to exactly one primary role before writing the prompt.
 
 ### 2. Shot / Extension Plan Block
 

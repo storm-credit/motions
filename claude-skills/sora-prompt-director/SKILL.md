@@ -21,6 +21,8 @@ Style may expand, continuity may not drift. Sora prompts can be expressive, but 
 - Keep the final prompt dense but not overloaded.
 - If key locks are missing, ask up to three targeted questions; otherwise infer defaults and proceed.
 - Final output must be copy/paste usable by a human operator, with no explanatory preamble unless the user asks for rationale.
+- For 5-10 second briefs, compress the concept into one clear visual beat with a beginning image, one physical action, and one ending image.
+- If the user explicitly asks for Version A and Version B, provide both; Version B is optional only when the user did not request alternatives.
 
 ## Workflow
 
@@ -73,6 +75,18 @@ Output:
 ```
 
 For multi-shot work, keep each Sora prompt focused on one clear visual beat and bridge the ending image into the next prompt.
+
+For two-shot work, output two separate copy/paste-ready prompts:
+
+```text
+SHOT 1 PROMPT:
+Ending image:
+Bridge to shot 2:
+
+SHOT 2 PROMPT:
+Starts from:
+Ending image:
+```
 
 ## Sora-Specific Direction
 

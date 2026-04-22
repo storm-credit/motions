@@ -31,6 +31,27 @@ REFERENCE ASSETS
 - Motion reference:
 - Edit source:
 
+UPLOAD ASSET MAP
+- Asset 1:
+  - Type:
+  - Primary role:
+  - Use for:
+  - Do not use for:
+- Asset 2:
+  - Type:
+  - Primary role:
+  - Use for:
+  - Do not use for:
+
+SPARSE BRIEF FALLBACK
+- Minimal subject lock:
+- Minimal start pose:
+- Minimal action path:
+- Minimal end pose:
+- Minimal camera direction:
+- Minimal negative prompt:
+- Fallback edit path:
+
 NEGATIVE CONSTRAINTS
 - No identity drift.
 - No wardrobe change.

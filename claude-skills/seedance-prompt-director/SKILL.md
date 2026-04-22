@@ -42,12 +42,15 @@ Create:
 
 - World: genre, tone, grade, palette.
 - Protagonist/key characters: face type, body type, wardrobe lock, signature detail.
+- Reference inventory: bind every image/video/audio asset to a role such as character, wardrobe, prop, vehicle, motion, mood, or audio.
 - Time: time of day, weather, light direction.
 - Space: location, 180-degree line, foreground/midground/background.
 - Props/motifs: continuity anchors.
 - Audio 3-layer: opening stinger, rhythm beat/BPM, ending tail.
 - Negative constraints: text, logos, face/body defects, wardrobe flicker, light drift, prop pop-in, AI plastic skin.
 - Ending bridge state.
+
+If multiple references conflict, preserve the user-declared hero character first, then wardrobe, then key prop, then style/mood. State any ignored or deprioritized reference detail.
 
 ### 3. Shot Timeline Block
 
@@ -120,6 +123,8 @@ SEGMENT 1 ([time range])
 
 For videos longer than one tool generation window, repeat the segment block and make each segment start from the previous segment's exact ending state.
 
+For a 30-second brief, default to two 15-second segments unless the user requests a different split. For 31-60 seconds, use three to four 15-second segments and require per-scene timecodes inside every segment.
+
 ## Seedance-Specific Direction
 
 - Make the first 1.5 seconds carry the hook: stinger, dissonance, payoff setup.
@@ -138,6 +143,7 @@ The final block must be directly usable by a human operator. Include:
 - Per-scene prompts with timecodes.
 - Negative prompt.
 - Speed, camera, transition, and optical effects.
+- Audio timing with BPM, dialogue timing, beat-aligned cut notes, and ending tail.
 - Effects density map.
 - Ending bridge state.
 - Continuity audit.

@@ -41,9 +41,25 @@ PROPS / MOTIFS
 - Prop:
 - Motif:
 
+REFERENCE INVENTORY
+- Asset 1:
+  - Type:
+  - Bound role:
+  - Must preserve:
+  - Can ignore:
+- Asset 2:
+  - Type:
+  - Bound role:
+  - Must preserve:
+  - Can ignore:
+- Conflict rule:
+
 AUDIO 3-LAYER
 - Opening stinger:
 - Rhythm beat:
+- BPM:
+- Dialogue timing:
+- Beat-aligned cut notes:
 - Ending tail:
 
 NEGATIVE CONSTRAINTS
@@ -83,6 +99,7 @@ SEGMENT 1 ([time range])
 [Korean Block]
 - Technical parameters:
 - Audio 3-layer:
+- BPM / dialogue timing / beat-cut notes:
 - Scene prompts:
 - Negative prompt:
 - Speed / Camera / Transitions / Optical:
@@ -92,6 +109,7 @@ SEGMENT 1 ([time range])
 [English Block if useful]
 - Technical parameters:
 - Audio 3-layer:
+- BPM / dialogue timing / beat-cut notes:
 - Scene prompts:
 - Negative prompt:
 - Speed / Camera / Transitions / Optical:
@@ -101,6 +119,7 @@ SEGMENT 1 ([time range])
 SEGMENT 2 ([time range], if needed)
 - Start from Segment 1 exact ending state.
 - Repeat the full prompt block.
+- Default 30s split: Segment 1 = 0-15s, Segment 2 = 15-30s unless user specifies otherwise.
 
 === CONTINUITY AUDIT ===
 - Character:

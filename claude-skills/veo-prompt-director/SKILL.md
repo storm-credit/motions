@@ -36,6 +36,7 @@ Fill every output field. Use `N/A` only when the platform feature or user input 
 Create:
 
 - Subject and wardrobe lock.
+- Reference binding, if any: map each ingredient/reference to subject, prop, wardrobe, environment, or style constraint.
 - Environment and light lock.
 - Camera/lens feeling.
 - Emotional beat.
@@ -102,6 +103,16 @@ Previous end state:
 Next start state:
 Compatibility note:
 Risk:
+```
+
+Reference binding schema:
+
+```text
+Reference asset:
+Bound role:
+Must preserve:
+May reinterpret:
+Must not affect:
 ```
 
 ## Veo-Specific Direction

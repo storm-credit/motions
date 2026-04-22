@@ -24,6 +24,10 @@ MOTION / PHYSICS
 - Fabric/object motion:
 - Camera motion:
 - Environmental motion:
+- 5-10s pacing:
+  - Beginning image:
+  - One physical action:
+  - Ending image:
 
 STYLE
 - Visual language:
@@ -62,7 +66,20 @@ Version B:
 [optional alternate]
 
 Version B rule:
+- If user requested A/B, Version B is mandatory.
 - Change camera/style/emphasis only; do not change canon locks.
+
+=== MULTI-SHOT PACKET ===
+
+SHOT 1 PROMPT:
+- Prompt:
+- Ending image:
+- Bridge to shot 2:
+
+SHOT 2 PROMPT:
+- Starts from:
+- Prompt:
+- Ending image:
 
 === CONTINUITY AUDIT ===
 
