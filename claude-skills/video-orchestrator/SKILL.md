@@ -27,6 +27,9 @@ Use these as conceptual agents, not necessarily as separate runtime processes.
 - `Kling Director`: Motion continuity, element binding, start/end frame logic, extension, movement stabilization.
 - `Veo Director`: Short high-quality hero shots, first/last-frame transitions, precise cinematic moments.
 - `Sora Director`: Style expansion, memorable visual alternatives, creative version B.
+- `Music Video Director`: Beat map, performance-versus-narrative balance, chorus/drop payoffs, lyric or dance emphasis.
+- `Film Director`: Dramatic objective, blocking geography, lens continuity, subtext, eyeline, and coverage logic.
+- `Animation Director`: Stylization lock, shape language, pose clarity, expression rhythm, and motion readability.
 
 When the user wants a full model-specific prompt director output, use the matching dedicated skill package: `seedance-prompt-director`, `kling-prompt-director`, `veo-prompt-director`, or `sora-prompt-director`.
 
@@ -76,7 +79,14 @@ Create a compact `Continuity Bible` before writing final prompts. Include:
 - Negative constraints.
 - Ending state / bridge state.
 
+Also lock one primary `Creative Director Mode`: `music video`, `film`, or `animation`.
+
+- `music video`: define beat map, hook moment, performance-versus-narrative ratio, choreography or lyric-sync focus, and repeatable motif.
+- `film`: define dramatic objective, emotional turn, blocking geography, lens language, and cut motivation.
+- `animation`: define medium, render/stylization lock, silhouette rules, pose rhythm, and expression/mouth-sync strategy.
+
 For full schema, read `references/continuity-templates.md`.
+For detailed MV / film / animation specialist rules, read `references/creative-specialist-modes.md`, then load `references/music-video-director-mode.md`, `references/film-director-mode.md`, or `references/animation-director-mode.md` as needed.
 
 ### 3. Break Into Shots
 
@@ -116,12 +126,13 @@ Defer final model-specific constraints to the dedicated prompt director skills, 
 Return a packet in this order:
 
 1. `Continuity Bible`
-2. `Shot Timeline`
-3. `Model Assignment`
-4. `Model-Ready Prompts`
-5. `Tool / Edit / Motion Passes`
-6. `Continuity Audit`
-7. `Next Action`
+2. `Creative Director Mode`
+3. `Shot Timeline`
+4. `Model Assignment`
+5. `Model-Ready Prompts`
+6. `Tool / Edit / Motion Passes`
+7. `Continuity Audit`
+8. `Next Action`
 
 Do not produce every model's prompt by default. Produce only the selected route, plus one fallback if useful.
 
@@ -136,6 +147,7 @@ Before final output, verify:
 - Emotional arc progresses logically.
 - Prompt does not contain contradictory instructions.
 - Model choice matches the shot purpose.
+- Creative Director Mode is explicit and consistent across the packet.
 - Repair/fallback path is clear.
 
 ## Output Style

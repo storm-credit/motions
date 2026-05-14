@@ -3,10 +3,44 @@
 ```text
 === VEO HERO SHOT BIBLE ===
 
+CREATIVE DIRECTOR MODE
+- Primary mode:
+- Secondary mode:
+- Why this mode:
+- Music video notes:
+- Film notes:
+- Animation notes:
+
+NARRATIVE BEAT SHEET
+- Scene ID:
+- Sequence ID:
+- Beat objective:
+- Obstacle:
+- Turn or reveal:
+- Dominant POV:
+
+CINEMATOGRAPHY PACKAGE
+- Focal length eq:
+- Sensor feel:
+- Aperture / DOF:
+- Camera height:
+- Subject distance:
+- Rig:
+- Movement motivation:
+
 SUBJECT
 - Character/object:
 - Wardrobe/material:
 - Signature detail:
+
+ANIMATION LOOK BIBLE
+- Animation family:
+- Render mode:
+- Line treatment:
+- Shading model:
+- Background treatment:
+- Pose language:
+- FX language:
 
 REFERENCE BINDING
 - Reference asset:
@@ -14,6 +48,15 @@ REFERENCE BINDING
 - Must preserve:
 - May reinterpret:
 - Must not affect:
+
+REFERENCE ASSET IMAGE PLAN
+- Asset image count:
+- Reference type:
+- Style in text only:
+- Resolution tier:
+- Model tier:
+- Extend needed:
+- Hero pose priority:
 
 ENVIRONMENT
 - Location:
@@ -41,6 +84,31 @@ AUDIO
 - Ambience:
 - SFX:
 
+PERFORMANCE MAP
+- Objective:
+- Tactic:
+- Subtext:
+- Tempo:
+- Gaze direction:
+- Micro-expression trigger:
+- Emotion start:
+- Emotion end:
+
+HERO COVERAGE BUNDLE
+- Primary hero:
+- Reaction hero:
+- Insert hero:
+- Musical unit covered:
+
+FRAME MATCH SPEC
+- First-frame anchors:
+- Last-frame anchors:
+- Sync-critical moment:
+
+POST SOUND INTENT
+- Post-audio owner:
+- Audio pipeline:
+
 NEGATIVE
 - No identity drift.
 - No wardrobe flicker.
@@ -54,6 +122,10 @@ Title:
 Input mode:
 Duration:
 Aspect ratio:
+Shot role:
+Musical unit covered:
+Coverage type:
+Editorial role:
 Prompt:
 First frame:
 Last frame:

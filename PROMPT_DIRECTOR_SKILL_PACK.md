@@ -7,6 +7,18 @@ The pack is organized in two layers:
 - `video-orchestrator`: top-level showrunner that chooses the best model/tool route.
 - `*-prompt-director`: model-specific prompt directors that produce paste-ready prompt packets.
 
+Each packet can now also be steered by a creative-specialist layer:
+
+- `Music Video Director`
+- `Film Director`
+- `Animation Director`
+
+Detailed specialist schemas live under:
+
+- `claude-skills/video-orchestrator/references/music-video-director-mode.md`
+- `claude-skills/video-orchestrator/references/film-director-mode.md`
+- `claude-skills/video-orchestrator/references/animation-director-mode.md`
+
 ## Official Doc Sync
 
 As of `2026-05-14`, the model-specific prompt directors were re-checked against current official docs for:
@@ -44,11 +56,12 @@ Use a specific director when the user already knows the target model:
 Every director skill should produce:
 
 1. A locked continuity bible.
-2. A shot or scene plan.
-3. A model-ready final prompt block.
-4. Negative constraints.
-5. Ending bridge state.
-6. Continuity audit.
+2. A creative director mode selection.
+3. A shot or scene plan.
+4. A model-ready final prompt block.
+5. Negative constraints.
+6. Ending bridge state.
+7. Continuity audit.
 
 The director skills are intentionally not just "advice" skills. They are prompt production skills.
 

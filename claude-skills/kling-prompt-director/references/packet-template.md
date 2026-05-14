@@ -3,11 +3,51 @@
 ```text
 === KLING MOTION BIBLE ===
 
+CREATIVE DIRECTOR MODE
+- Primary mode:
+- Secondary mode:
+- Why this mode:
+- Music video notes:
+- Film notes:
+- Animation notes:
+
+NARRATIVE BEAT SHEET
+- Scene ID:
+- Sequence ID:
+- Beat objective:
+- Obstacle:
+- Turn or reveal:
+- Dominant POV:
+
+CINEMATOGRAPHY PACKAGE
+- Focal length eq:
+- Sensor feel:
+- Aperture / DOF:
+- Camera height:
+- Subject distance:
+- Rig:
+- Movement motivation:
+
+BLOCKING GEOMETRY
+- Actor marks:
+- Eyeline target:
+- Prop hand:
+- Entry/exit lanes:
+
 SUBJECT LOCKS
 - Character:
 - Face/body:
 - Wardrobe:
 - Signature detail:
+
+ANIMATION LOOK BIBLE
+- Animation family:
+- Render mode:
+- Line treatment:
+- Shading model:
+- Deformation budget:
+- Pose language:
+- FX language:
 
 ELEMENT LOCKS
 - Prop / object:
@@ -30,6 +70,34 @@ REFERENCE ASSETS
 - End frame:
 - Motion reference:
 - Edit source:
+
+MUSIC VIDEO SUPPORT
+- Choreo count map:
+- Formation map:
+- Lead limb:
+- Travel direction:
+- Loopable end pose:
+
+ELEMENT PACKAGE
+- Element ID:
+- View count:
+- Voice bound:
+- Element type:
+- Appears in start frame:
+- Bind budget:
+- Wardrobe handled outside facial binding:
+- Orientation match:
+- Multi-character element map:
+
+PERFORMANCE MAP
+- Objective:
+- Tactic:
+- Subtext:
+- Tempo:
+- Gaze direction:
+- Micro-expression trigger:
+- Emotion start:
+- Emotion end:
 
 UPLOAD ASSET MAP
 - Asset 1:
@@ -68,6 +136,9 @@ Every extension must begin from the previous clip's ending pose, camera position
 
 SHOT 1
 - Purpose:
+- Shot role:
+- Coverage type:
+- Editorial role:
 - Input mode:
 - Aspect ratio:
 - Duration:
@@ -78,6 +149,7 @@ SHOT 1
 - Motion continuity:
 - End state:
 - Negative prompt:
+- Musical unit covered:
 - Next step:
 
 SHOT 2 / EXTENSION
@@ -144,4 +216,13 @@ Continuity lock:
 - End state specific enough for extension?
 - Camera axis preserved?
 - Motion Control/Edit used only when justified?
+
+=== EDITORIAL PLAN ===
+- Cut type:
+- Cut trigger:
+- Match-on-action anchor:
+- Sound bridge:
+- Insert required:
+- Reaction required:
+- Pickup priority:
 ```

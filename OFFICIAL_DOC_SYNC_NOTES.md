@@ -28,6 +28,7 @@ Official sources reviewed:
 
 - [Kling quickstart](https://kling.ai/quickstart)
 - [Kling VIDEO 3.0 Model User Guide](https://kling.ai/quickstart/klingai-video-3-model-user-guide)
+- [Kling Element Library User Guide](https://kling.ai/quickstart/klingai-element-library-3-user-guide)
 - [Kling Start and End Frames guide](https://kling.ai/quickstart/ai-video-start-end-frames)
 - [Kling VIDEO 3.0 Motion Control guide](https://kling.ai/quickstart/motion-control-user-guide)
 - [Kling Extend with Prompts guide](https://kling.ai/quickstart/ai-video-extension)
@@ -37,6 +38,7 @@ Key doc-derived constraints and capabilities:
 - Kling VIDEO 3.0 officially supports `Multi-Shot` and `Custom Multi-Shot`.
 - Kling VIDEO 3.0 officially supports multi-image references and video references as Elements for stronger subject consistency.
 - Kling VIDEO 3.0 officially supports upgraded Native Audio with multilingual character speech.
+- Kling Element Library officially supports multi-angle reusable elements, voice binding for character elements, up to 3 bound elements in start-frame/start-and-end-frame generation, and up to 7 reference characters in video generation.
 - Start and End Frames guidance says the two images should be similar; large differences may cause a shot switch.
 - Motion Control guidance says facial element binding uses facial information only, not clothing, hairstyle, makeup, or props.
 - Extend with Prompts guidance says extensions usually add `4-5` seconds and can continue up to `3 minutes`, with prompt continuity centered on `Subject + Movement`.
@@ -58,8 +60,10 @@ Key doc-derived constraints and capabilities:
 - Veo 3.1 officially supports `720p` and `1080p` output at `24 FPS`.
 - Veo 3.1 model page lists official prompt-language support as `English`.
 - First/last-frame generation is officially supported.
-- Asset / ingredient image guidance is officially documented for Veo 3.1.
-- Style reference images are **not** supported on Veo 3.1 and are still a Veo 2 path.
+- Reference asset image guidance is officially documented for Veo 3.1 on supported tiers.
+- Extend videos are officially documented for Veo 3.1 on supported tiers.
+- Reference image to video on Veo 3.1 supports only `8` seconds.
+- Style reference images are **not** supported on Veo 3.1 and remain a Veo 2 path.
 - Vertex prompt guide documents negative prompts and recommends listing unwanted elements directly rather than phrasing them as "don't" instructions.
 
 ## Sora 2

@@ -9,6 +9,8 @@ Act as a Seedance 2.0 prompt director. Turn a rough idea into a continuity-locke
 
 Do not stop at advice or routing. This skill must produce the actual Seedance-ready prompt packet unless the user explicitly asks only for analysis.
 
+If the brief implies `music video`, `film`, or `animation`, activate the matching creative-specialist layer and shape the packet accordingly. For detailed mode rules, read `../video-orchestrator/references/creative-specialist-modes.md` and the matching detailed mode reference in that folder.
+
 ## Core Principle
 
 Continuity first. Before writing final prompts, lock a `Continuity Bible`. Every shot must preserve character, wardrobe, time, location, light direction, props, emotional state, and audio rhythm.
@@ -18,6 +20,7 @@ Continuity first. Before writing final prompts, lock a `Continuity Bible`. Every
 - Default duration: 15 seconds unless the user specifies otherwise.
 - Default aspect ratio: match the user's target. If absent, choose 16:9 for cinematic/ad work and 9:16 for Shorts/TikTok/Reels.
 - Default output: Korean director notes plus model-ready prompt blocks. Add an English prompt block when useful for generation quality.
+- Default creative mode: infer one primary mode, choosing `music video`, `film`, or `animation`, and state it explicitly in the packet.
 - Reference assets: if the target Seedance surface supports explicit asset notation such as `@Image 1`, `@Video 1`, or `@Audio 1`, use it when it improves binding clarity; otherwise describe assets in natural language.
 - Seed strategy: for series, lock/reuse; for one-off clips, record the first successful seed if available.
 - Official capability note: Seedance 2.0 officially supports text, image, audio, and video input; mixed-modality reference can combine up to 9 images, 3 video clips, and 3 audio clips in one generation flow.
@@ -42,6 +45,7 @@ Ask at most three focused questions only if needed.
 
 Create:
 
+- Creative Director Mode: `music video`, `film`, or `animation`, plus one-sentence reason.
 - World: genre, tone, grade, palette.
 - Protagonist/key characters: face type, body type, wardrobe lock, signature detail.
 - Hook strategy: 0-0.5s stinger, 0.5-1.5s dissonance, 1.5s+ payoff setup.
@@ -52,6 +56,12 @@ Create:
 - Audio 3-layer: opening stinger, rhythm beat, BPM, dialogue timing, beat-aligned cut notes, ending tail.
 - Negative constraints: text, logos, face/body defects, wardrobe flicker, light drift, prop pop-in, AI plastic skin.
 - Ending bridge state.
+
+Add mode-specific direction:
+
+- `music video`: song section, performance-versus-narrative ratio, beat-drop payoff, choreography or lip-sync focus.
+- `film`: scene objective, emotional turn, blocking geography, lens progression.
+- `animation`: animation medium, shape language, pose rhythm, expression rule, effects rule, and storyboard or animatic input plan.
 
 If multiple references conflict, preserve the user-declared hero character first, then wardrobe, then key prop, then style/mood. State any ignored or deprioritized reference detail.
 
@@ -76,6 +86,9 @@ Output in this order:
 ```text
 === CONTINUITY BIBLE ===
 [locked bible]
+
+=== CREATIVE DIRECTOR MODE ===
+[primary mode, specialist notes, and why]
 
 === SHOT-BY-SHOT TIMELINE ===
 [director notes]
@@ -148,12 +161,16 @@ For a 30-second brief, default to two 15-second segments unless the user request
 - Use specific camera verbs: dolly-in, handheld sway, whip pan, rack focus, match cut, hard cut on beat.
 - Use specific speed values when helpful: 80% to 110% ramp, 60% slow motion, 1-frame flash.
 - Use audio cues as timing glue across cuts.
+- In `music video` mode, make chorus/drop timing visible in the shot plan.
+- In `film` mode, make every cut serve a dramatic turn or spatial clarification.
+- In `animation` mode, state the render/stylization lock before action details so the clip does not drift back toward generic live action, and keep one style family across the whole segment.
 
 ## Mandatory Prompt Quality Bar
 
 The final block must be directly usable by a human operator. Include:
 
 - Technical parameters.
+- Creative Director Mode and specialist notes.
 - Hook strategy.
 - Reference inventory with per-asset fields.
 - Reference asset handling in natural language.

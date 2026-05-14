@@ -9,6 +9,8 @@ Act as a Kling 3.0 motion and continuity director. Convert a brief into prompts 
 
 Do not stop at advice or routing. This skill must produce the actual Kling-ready prompt packet, plus Motion Control or Edit handoff blocks when useful. If the user explicitly asks for analysis only, critique only, or review only, do not generate a final prompt packet; provide the requested analysis and clearly mark that generation was intentionally skipped.
 
+If the brief implies `music video`, `film`, or `animation`, activate the matching creative-specialist layer and shape the packet accordingly. For detailed mode rules, read `../video-orchestrator/references/creative-specialist-modes.md` and the matching detailed mode reference in that folder.
+
 ## Core Principle
 
 Motion continuity first. Kling prompts should make the same subject continue the same action through a plausible path, not restart emotion, location, or body state every shot.
@@ -17,13 +19,16 @@ Motion continuity first. Kling prompts should make the same subject continue the
 
 - Use the platform-supported duration requested by the user. If absent, plan short clips that can be extended.
 - Use 16:9 for cinematic work, 9:16 for shorts, unless the user specifies.
+- Infer one primary creative mode: `music video`, `film`, or `animation`, and state it explicitly in the packet.
 - If one generation should cover several cuts, prefer Kling VIDEO 3.0 `Multi-Shot` or `Custom Multi-Shot` instead of forcing a single-shot prompt.
 - If reference images/videos exist, define each asset's role: element, start frame, end frame, motion reference, style reference, or edit source.
+- If recurring characters or props exist, prefer a small multi-angle element package before writing the final motion prompt.
 - Kling VIDEO 3.0 supports native audio and multilingual character speech; include speaking-character clarity when audio matters.
 - If motion is hard to describe in text, create a `Motion Control Handoff`.
 - If a generated clip is mostly good, prefer `Kling O1 Edit / Kling 01 Edit` over full regeneration.
 - For one-line briefs with no references, synthesize a minimal usable packet: one subject lock, one start pose, one action path, one end pose, one camera direction, one negative prompt, and one fallback edit path.
 - Official continuation note: Kling extensions typically add 4-5 seconds per step and can continue up to 3 minutes total, so preserve end-state precision.
+- Official element note: Kling's Element Library can bind up to 3 elements in start-frame or start/end-frame generation, supports multi-angle reusable assets, and supports voice binding for character elements on supported routes.
 
 ## Workflow
 
@@ -31,6 +36,7 @@ Motion continuity first. Kling prompts should make the same subject continue the
 
 Create:
 
+- Creative Director Mode: `music video`, `film`, or `animation`, plus one-sentence reason.
 - Subject locks: face type, body type, wardrobe, signature detail.
 - Element locks: objects, props, vehicles, creature details.
 - Motion path: start pose, action arc, end pose.
@@ -38,6 +44,12 @@ Create:
 - Reference asset map.
 - Extension strategy.
 - Negative constraints.
+
+Add mode-specific direction:
+
+- `music video`: dance phrase, beat-hit motion, performer-to-camera relationship, loopable motif.
+- `film`: blocking geography, eyeline, dramatic turn, motivated entrance/exit.
+- `animation`: pose clarity, exaggeration rule, smear/anticipation allowance, expression rhythm, element package, and motion-control prep.
 
 For multiple uploads, make an explicit asset inventory that maps each file to exactly one primary role before writing the prompt.
 
@@ -61,6 +73,9 @@ Output:
 ```text
 === KLING MOTION BIBLE ===
 [locked subject, element, camera, motion state]
+
+=== CREATIVE DIRECTOR MODE ===
+[primary mode, specialist notes, and why]
 
 === SHOT / EXTENSION PLAN ===
 [shot chain with start/end states]
@@ -103,12 +118,16 @@ For extension chains, each extension prompt must begin from the previous clip's 
 - Use start/end frame logic for transitions when available.
 - Use extension prompts that begin from the previous ending state and usually follow the formula `Subject + Movement`.
 - Use negative prompts against identity drift, object morphing, warped hands, outfit changes, camera-axis flips, and impossible motion.
+- In `music video` mode, prioritize repeatable choreography and camera accents that land on beat.
+- In `film` mode, prioritize entrances, exits, and blocking that read as one dramatic action.
+- In `animation` mode, prioritize silhouette readability and clean pose transitions over hyper-detailed realism, and never assume facial binding preserves costume or props.
 
 ## Mandatory Prompt Quality Bar
 
 The final block must be directly usable by a human operator. Include:
 
 - Input mode: text, image-to-video, start/end frames, motion control, or edit.
+- Creative Director Mode and specialist notes.
 - Subject and element locks.
 - Start state and end state.
 - Camera movement and screen direction.

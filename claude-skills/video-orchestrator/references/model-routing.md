@@ -46,6 +46,20 @@ Use this reference when selecting which available video model or tool should han
 | Long sequence chain | Seedance 2.0 | Kling 3.0 | Cinema Studio |
 | Camera/VFX boost | Higgsfield DOP | Sora 2 | Kling 3.0 |
 
+## Creative Mode Routing
+
+| Creative Mode | First Choice | Second Choice | Best Support |
+|---|---|---|---|
+| Music video | Seedance 2.0 | Kling 3.0 | Higgsfield DOP, Mixed Media |
+| Film | Veo 3.1 | Sora 2 | Seedance 2.0, Kling 3.0 |
+| Animation | Sora 2 | Veo 3.1 | Kling 3.0, Seedance 2.0 |
+
+Notes:
+
+- `Music video`: use Seedance when beat map, audio timing, or multi-shot musical progression is the backbone; add Kling when choreography continuity matters.
+- `Film`: use Veo for short emotionally precise hero beats and Sora for strong cinematic interpretation; use Seedance or Kling when the scene becomes multi-shot or movement-critical.
+- `Animation`: use Sora or Veo for stylized key-image direction, then Kling when action readability or pose continuity needs reinforcement.
+
 ## Mode Selection
 
 ### Minimal Mode

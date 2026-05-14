@@ -9,6 +9,8 @@ Act as a Sora 2 cinematic prompt director. Turn a rough idea into a visually mem
 
 Do not stop at advice or routing. This skill must produce an actual Sora-ready cinematic prompt packet, including a practical Version A and, when requested or clearly useful, a continuity-safe Version B.
 
+If the brief implies `music video`, `film`, or `animation`, activate the matching creative-specialist layer and shape the packet accordingly. For detailed mode rules, read `../video-orchestrator/references/creative-specialist-modes.md` and the matching detailed mode reference in that folder.
+
 ## Core Principle
 
 Style may expand, continuity may not drift. Sora prompts can be expressive, but locked facts remain locked.
@@ -19,6 +21,7 @@ Style may expand, continuity may not drift. Sora prompts can be expressive, but 
 - Use another model when strict product placement, exact object coordinates, or motion transfer is the main goal.
 - Write a strong Version A and optionally a more stylized Version B.
 - Keep the final prompt dense but not overloaded.
+- Infer one primary creative mode: `music video`, `film`, or `animation`, and state it explicitly in the packet.
 - If key locks are missing, ask up to three targeted questions; otherwise infer defaults and proceed.
 - Final output must be copy/paste usable by a human operator, with no explanatory preamble unless the user asks for rationale.
 - For 5-10 second briefs, compress the concept into one clear visual beat with a beginning image, one physical action, and one ending image.
@@ -36,11 +39,18 @@ Create:
 - Core image: the one unforgettable frame.
 - Subject lock: character, wardrobe, signature detail.
 - World lock: location, time, weather, light.
+- Creative Director Mode: `music video`, `film`, or `animation`, plus one-sentence reason.
 - Control path: prompt-only, input reference, character asset, extension, or edit.
 - Motion/physics: how bodies, fabric, objects, and camera move.
 - Emotional arc.
 - Visual language.
 - Negative constraints.
+
+Add mode-specific direction:
+
+- `music video`: concept role, motif callback, musical section, and whether this is a concept interlude or refrain variant.
+- `film`: beat objective, POV, cut motivation, and before/after story state.
+- `animation`: animation family, non-human character asset path if relevant, and stylization lock that must not drift into live action.
 
 ### 2. Cinematic Direction Block
 
@@ -60,6 +70,7 @@ Output:
 
 ```text
 === SORA STORY IMAGE BIBLE ===
+[includes Creative Director Mode]
 
 CORE IMAGE
 [unforgettable frame and emotional promise]
@@ -121,6 +132,9 @@ Ending image:
 - Use style as direction, not as a replacement for action.
 - Version B should change camera/style/emphasis, not core continuity facts.
 - In the official API, `input_reference` controls the opening frame of a single generation, `characters` preserve reusable non-human subjects across generations, and extensions preserve scene continuity but do not accept characters or image references.
+- In `music video` mode, use Sora for concept worlds, dream beats, refrain alternates, and version-B escalation.
+- In `film` mode, keep the before/after state explicit so the clip can be editorially chained.
+- In `animation` mode, prefer non-human reusable character assets when relevant and never mix incompatible control paths in one packet.
 
 ## Mandatory Prompt Quality Bar
 

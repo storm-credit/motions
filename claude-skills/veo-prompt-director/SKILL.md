@@ -9,6 +9,8 @@ Act as a Veo 3.1 hero-shot director. Convert a brief into one or more short, pre
 
 Do not stop at advice or routing. This skill must produce an actual Veo-ready prompt packet with first-frame, last-frame, audio, and continuity bridge details when useful.
 
+If the brief implies `music video`, `film`, or `animation`, activate the matching creative-specialist layer and shape the packet accordingly. For detailed mode rules, read `../video-orchestrator/references/creative-specialist-modes.md` and the matching detailed mode reference in that folder.
+
 ## Core Principle
 
 Veo works best when a shot has a clear subject, action, camera move, environment, and ending state. Do not overload one prompt with too many cuts or story beats.
@@ -19,9 +21,12 @@ Veo works best when a shot has a clear subject, action, camera move, environment
 - Default aspect ratio: 16:9 for cinematic work and 9:16 for Shorts/TikTok/Reels when the user implies vertical delivery. Veo 3.1 officially supports 16:9 and 9:16.
 - Default input mode: text-to-video unless references, first/last frames, or ingredients are provided.
 - Use first/last-frame descriptions when transition control matters.
-- Use reference/ingredient asset images when consistency matters, but do not rely on style reference images for Veo 3.1. Style image guidance is not supported on Veo 3.1, so express style in text.
+- Infer one primary creative mode: `music video`, `film`, or `animation`, and state it explicitly in the packet.
+- Use reference/ingredient asset images when consistency matters. Veo 3.1 supports reference asset images on supported tiers, but do not rely on style reference images for Veo 3.1; express style in text.
+- If using Veo 3.1 reference asset images, default to an 8-second clip unless the user explicitly requests a different compatible plan.
 - Use audio only when it supports dialogue, ambience, SFX, or emotional timing.
 - Use Veo 3.1 for hero quality and Veo 3.1 Lite for preview when speed/cost matters.
+- Veo 3.1 supports extend-video workflows on supported tiers; Veo 3.1 Lite does not support reference asset images.
 - Write model prompts in English by default. Veo 3.1 official prompt-language support is English, so if the user briefs in Korean, keep Korean notes but translate the final model prompt to English.
 - Resolution note: Veo 3.1 officially supports 720p and 1080p output at 24 FPS.
 
@@ -35,6 +40,7 @@ Fill every output field. Use `N/A` only when the platform feature or user input 
 
 Create:
 
+- Creative Director Mode: `music video`, `film`, or `animation`, plus one-sentence reason.
 - Subject and wardrobe lock.
 - Reference binding, if any: map each ingredient/reference to subject, prop, wardrobe, environment, or style constraint.
 - Environment and light lock.
@@ -44,6 +50,12 @@ Create:
 - Last frame description.
 - Audio/dialogue/SFX cue.
 - Negative constraints.
+
+Add mode-specific direction:
+
+- `music video`: hero insert role, musical unit covered, and whether lip-sync is direct, implied, or avoided.
+- `film`: beat objective, dominant POV, and cut motivation.
+- `animation`: animation family, silhouette goal, pose rhythm, and text-only style lock.
 
 ### 2. Shot Strategy Block
 
@@ -70,6 +82,9 @@ Output:
 ```text
 === VEO HERO SHOT BIBLE ===
 [locked subject, environment, camera, emotion]
+
+=== CREATIVE DIRECTOR MODE ===
+[primary mode, specialist notes, and why]
 
 === SHOT STRATEGY ===
 [why this route]
@@ -124,6 +139,9 @@ Must not affect:
 - For audio, write natural dialogue, ambient sound, and SFX cues separately.
 - When writing negative prompts for Veo, prefer listing unwanted elements directly instead of phrasing them as instructive sentences with "no" or "don't".
 - Avoid packing multiple locations or abrupt time jumps into one prompt.
+- In `film` mode, keep one dominant dramatic beat per clip.
+- In `music video` mode, treat Veo as an insert / emotional-lift tool rather than the main lip-sync workhorse unless the user explicitly wants it.
+- In `animation` mode, keep style cues in text and use reference asset images for subject identity or prop locks, not for style-image transfer.
 
 ## Mandatory Prompt Quality Bar
 

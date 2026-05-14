@@ -10,6 +10,9 @@ Use these templates when creating continuity-safe video prompt packets.
 PROJECT
 - Title:
 - Format: short / ad / music video / drama / product / experiment
+- Creative Director Mode: music video / film / animation
+- Primary specialist:
+- Secondary specialist:
 - Target duration:
 - Aspect ratio:
 - Final delivery model:
@@ -24,6 +27,17 @@ WORLD
 - Visual grade:
 - Color palette:
 - Texture:
+- Forbidden style drift:
+
+ANIMATION LOOK BIBLE
+- Animation family:
+- Render mode:
+- Line treatment:
+- Shading model:
+- Background treatment:
+- Deformation budget:
+- Pose language:
+- FX language:
 - Forbidden style drift:
 
 CHARACTERS
@@ -73,6 +87,58 @@ CAMERA LANGUAGE
 - Forbidden camera moves:
 - Shot rhythm:
 
+CINEMATOGRAPHY PACKAGE
+- Focal length eq:
+- Sensor feel:
+- Aperture / DOF:
+- Camera height:
+- Subject distance:
+- Rig:
+- Movement motivation:
+
+LIGHTING PLAN
+- Key source:
+- Fill ratio:
+- Backlight:
+- Practicals:
+- Light continuity note:
+
+BLOCKING GEOMETRY
+- Actor marks:
+- Eyeline target:
+- Prop hand:
+- Entry/exit lanes:
+- Reverse allowed:
+
+CREATIVE DIRECTION
+- Music video notes:
+- Music structure:
+- Performance coverage:
+- Refrain plan:
+- Film notes:
+- Animation notes:
+- Primary payoff:
+
+NARRATIVE BEAT SHEET
+- Scene ID:
+- Sequence ID:
+- Beat objective:
+- Obstacle:
+- Turn or reveal:
+- Dominant POV:
+
+PERFORMANCE MAP
+- Objective:
+- Tactic:
+- Subtext:
+- Tempo:
+- Gaze direction:
+- Micro-expression trigger:
+- Emotion start:
+- Emotion end:
+- Breath / effort note:
+- Speaker visibility:
+
 AUDIO
 - Music mood:
 - BPM:
@@ -81,6 +147,23 @@ AUDIO
 - Diegetic sound:
 - Dialogue:
 - Ending tail:
+
+DELIVERY VARIANTS
+- Master aspect:
+- Social aspect:
+- Center safe zone:
+- Text safe zone:
+- Crop-safe blocking:
+- Reframe fallback:
+
+RIGHTS / ELIGIBILITY
+- Performer type:
+- Real-person rights confirmed:
+- Track rights confirmed:
+- Audio source type:
+- Face input required:
+- Target model allows input:
+- Copyright risk:
 
 HOOK STRATEGY
 - 0.0-0.5s:
@@ -106,6 +189,19 @@ REFERENCE ASSETS
 - Use as motion reference: yes / no
 - Use as style reference: yes / no
 - Natural-language description:
+
+ANIMATION ASSET PACK
+- Hero model sheet:
+- Turnaround views:
+- Expression sheet:
+- Mouth chart:
+- Hand-shape sheet:
+- Prop orthos:
+- Layout board:
+- Color script:
+- Animatic or storyboard:
+- Asset priority:
+- Platform binding method:
 
 SEED / REPRODUCIBILITY
 - Seed strategy:
@@ -146,6 +242,21 @@ Action:
 - Secondary action:
 - Micro gesture:
 
+Animation performance:
+- Acting beat:
+- Key pose A:
+- Key pose B:
+- Key pose C:
+- Contact pose:
+- Hold feel:
+- Accent frames:
+- Mouth activity:
+- Phoneme density:
+- Secondary action:
+- FX beat:
+- Parallax intent:
+- Silhouette goal:
+
 Camera:
 - Framing:
 - Angle:
@@ -163,6 +274,23 @@ Model-specific notes:
 - Kling:
 - Veo:
 - Sora:
+- Creative specialist note:
+
+Coverage:
+- Coverage type:
+- Editorial role:
+- Shot priority:
+
+Editorial:
+- Cut type:
+- Cut trigger:
+- Match-on-action anchor:
+- J-cut or L-cut:
+- Sound bridge:
+- Insert required:
+- Reaction required:
+- Pickup priority:
+- Repair hide point:
 
 Ending state:
 - Pose:
@@ -217,22 +345,25 @@ Do not:
 1. Continuity Bible
 [locked project bible]
 
-2. Shot Timeline
+2. Creative Director Mode
+[music video / film / animation plus specialist notes]
+
+3. Shot Timeline
 [shot-by-shot timeline]
 
-3. Model Assignment
+4. Model Assignment
 [shot -> model/tool -> reason -> fallback]
 
-4. Model-Ready Prompts
+5. Model-Ready Prompts
 [only selected models, not every model by default]
 
-5. Tool / Edit / Motion Passes
+6. Tool / Edit / Motion Passes
 [motion/edit/dop instructions if needed]
 
-6. Continuity Audit
+7. Continuity Audit
 [checklist results]
 
-7. Next Action
+8. Next Action
 [what to generate first]
 ```
 
@@ -281,6 +412,17 @@ Prompt:
 - No contradictory instructions?
 - Negative constraints included?
 - Model-specific controls separated?
+
+Animation:
+- Off-model silhouette avoided?
+- Line boil or line dropout controlled?
+- Cel-shadow consistency maintained?
+- Rimlight consistency maintained?
+- Texture shimmer controlled?
+- Rig break or joint pop avoided?
+- Parallax mismatch avoided?
+- FX density drift avoided?
+- Prop scale drift avoided?
 
 Routing:
 - Assigned model matches shot purpose?

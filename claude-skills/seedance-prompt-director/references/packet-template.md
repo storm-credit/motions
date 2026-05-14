@@ -12,6 +12,53 @@ WORLD
 - Aspect ratio:
 - Seed strategy:
 
+ANIMATION LOOK BIBLE
+- Animation family:
+- Render mode:
+- Line treatment:
+- Shading model:
+- Background treatment:
+- Deformation budget:
+- Pose language:
+- FX language:
+
+CREATIVE DIRECTOR MODE
+- Primary mode:
+- Secondary mode:
+- Why this mode:
+- Music video notes:
+- Film notes:
+- Animation notes:
+
+NARRATIVE BEAT SHEET
+- Scene ID:
+- Sequence ID:
+- Beat objective:
+- Obstacle:
+- Turn or reveal:
+- Dominant POV:
+
+CINEMATOGRAPHY PACKAGE
+- Focal length eq:
+- Sensor feel:
+- Aperture / DOF:
+- Camera height:
+- Subject distance:
+- Rig:
+- Movement motivation:
+
+LIGHTING PLAN
+- Key source:
+- Fill ratio:
+- Backlight:
+- Practicals:
+
+BLOCKING GEOMETRY
+- Actor marks:
+- Eyeline target:
+- Prop hand:
+- Entry/exit lanes:
+
 CHARACTERS
 - Character ID:
 - Appearance:
@@ -37,6 +84,16 @@ HOOK STRATEGY
 - 0.5-1.5s:
 - 1.5s+:
 
+MUSIC STRUCTURE
+- Track source:
+- Rights status:
+- BPM:
+- Time signature:
+- Section map:
+- Lyric priority lines:
+- Sync priority:
+- Section energy:
+
 PROPS / MOTIFS
 - Prop:
 - Motif:
@@ -54,6 +111,19 @@ REFERENCE INVENTORY
   - Can ignore:
 - Conflict rule:
 
+ANIMATION ASSET PACK
+- Hero model sheet:
+- Turnaround views:
+- Expression sheet:
+- Mouth chart:
+- Hand-shape sheet:
+- Prop orthos:
+- Layout board:
+- Color script:
+- Animatic or storyboard:
+- Asset priority:
+- Platform binding method:
+
 AUDIO 3-LAYER
 - Opening stinger:
 - Rhythm beat:
@@ -61,6 +131,58 @@ AUDIO 3-LAYER
 - Dialogue timing:
 - Beat-aligned cut notes:
 - Ending tail:
+
+PERFORMANCE COVERAGE
+- Shot role:
+- Artist visibility:
+- Lip-sync mode:
+- Lyric excerpt:
+- Dance dependency:
+- Count-in:
+- Count-out:
+- Full-body required:
+- Hands/feet visibility:
+- Formation rule:
+- Fallback cutaway:
+
+REFRAIN PLAN
+- Chorus anchor shot ID:
+- Repeat count:
+- Must-match locks:
+- Allowed variation:
+- Motif callback:
+- Final chorus escalation:
+- Thumbnail frame:
+- Loop-out frame:
+
+DELIVERY VARIANTS
+- Master aspect:
+- Social aspect:
+- Center safe zone:
+- Text safe zone:
+- Crop-safe blocking:
+- Reframe fallback:
+
+RIGHTS / ELIGIBILITY
+- Performer type:
+- Real-person rights confirmed:
+- Track rights confirmed:
+- Audio source type:
+- Face input required:
+- Target model allows input:
+- Copyright risk:
+
+PERFORMANCE MAP
+- Objective:
+- Tactic:
+- Subtext:
+- Tempo:
+- Gaze direction:
+- Micro-expression trigger:
+- Emotion start:
+- Emotion end:
+- Breath / effort note:
+- Speaker visibility:
 
 NEGATIVE CONSTRAINTS
 - No text, subtitles, watermarks, logos unless requested.
@@ -74,6 +196,9 @@ NEGATIVE CONSTRAINTS
 
 SHOT 1 ([time]) - [name]
 - Continuity anchor:
+- Shot role:
+- Coverage type:
+- Editorial role:
 - Action:
 - Camera:
 - Effects:
@@ -98,7 +223,11 @@ SEGMENT 1 ([time range])
 
 [Korean Block]
 - Technical parameters:
+- Creative Director Mode:
 - Audio 3-layer:
+- Music structure:
+- Performance coverage:
+- Refrain plan:
 - BPM / dialogue timing / beat-cut notes:
 - Scene prompts:
 - Negative prompt:
@@ -131,4 +260,15 @@ SEGMENT 2 ([time range], if needed)
 - Hook:
 - Prompt load:
 - Continuity load:
+
+=== EDITORIAL PLAN ===
+- Cut type:
+- Cut trigger:
+- Match-on-action anchor:
+- J-cut or L-cut:
+- Sound bridge:
+- Insert required:
+- Reaction required:
+- Pickup priority:
+- Repair hide point:
 ```
