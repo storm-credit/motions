@@ -15,15 +15,15 @@ Veo works best when a shot has a clear subject, action, camera move, environment
 
 ## Default Assumptions
 
-- Plan short clips unless the user asks for a longer chain.
-- Default duration: 8 seconds for a single hero shot unless the user specifies otherwise.
-- Default aspect ratio: 16:9 for cinematic work and 9:16 for Shorts/TikTok/Reels when the user implies vertical delivery.
+- Plan Veo 3.1 clips around the official short-form lengths: 4, 6, or 8 seconds. Use 8 seconds by default for a single hero shot unless the user specifies otherwise.
+- Default aspect ratio: 16:9 for cinematic work and 9:16 for Shorts/TikTok/Reels when the user implies vertical delivery. Veo 3.1 officially supports 16:9 and 9:16.
 - Default input mode: text-to-video unless references, first/last frames, or ingredients are provided.
 - Use first/last-frame descriptions when transition control matters.
-- Use reference/ingredient assets when consistency matters.
+- Use reference/ingredient asset images when consistency matters, but do not rely on style reference images for Veo 3.1. Style image guidance is not supported on Veo 3.1, so express style in text.
 - Use audio only when it supports dialogue, ambience, SFX, or emotional timing.
 - Use Veo 3.1 for hero quality and Veo 3.1 Lite for preview when speed/cost matters.
-- Write model prompts in English by default unless the user requests Korean-only.
+- Write model prompts in English by default. Veo 3.1 official prompt-language support is English, so if the user briefs in Korean, keep Korean notes but translate the final model prompt to English.
+- Resolution note: Veo 3.1 officially supports 720p and 1080p output at 24 FPS.
 
 ## Field Rules
 
@@ -122,6 +122,7 @@ Must not affect:
 - Include camera move as part of the action, not as a disconnected instruction.
 - For first/last frame work, describe exact pose, camera distance, light, and object positions.
 - For audio, write natural dialogue, ambient sound, and SFX cues separately.
+- When writing negative prompts for Veo, prefer listing unwanted elements directly instead of phrasing them as instructive sentences with "no" or "don't".
 - Avoid packing multiple locations or abrupt time jumps into one prompt.
 
 ## Mandatory Prompt Quality Bar

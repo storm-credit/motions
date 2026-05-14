@@ -7,6 +7,17 @@ The pack is organized in two layers:
 - `video-orchestrator`: top-level showrunner that chooses the best model/tool route.
 - `*-prompt-director`: model-specific prompt directors that produce paste-ready prompt packets.
 
+## Official Doc Sync
+
+As of `2026-05-14`, the model-specific prompt directors were re-checked against current official docs for:
+
+- `Seedance 2.0`
+- `Kling 3.0`
+- `Google Veo 3.1`
+- `Sora 2`
+
+See `OFFICIAL_DOC_SYNC_NOTES.md` for the exact sources reviewed and the capability/constraint changes that were tightened in the skills.
+
 ## Skill Files
 
 Upload these `.skill` packages individually when you want them available as separate Claude skills:

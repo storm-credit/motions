@@ -109,6 +109,8 @@ For routing matrix and decision rules, read `references/model-routing.md`.
 
 For internal orchestra execution and review-lane efficiency, read `references/review-lane-model-assignment.md`.
 
+Defer final model-specific constraints to the dedicated prompt director skills, which may be tightened against official product docs more frequently than the top-level router.
+
 ### 5. Produce Prompt Packet
 
 Return a packet in this order:

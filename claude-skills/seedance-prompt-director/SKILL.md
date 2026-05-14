@@ -18,8 +18,10 @@ Continuity first. Before writing final prompts, lock a `Continuity Bible`. Every
 - Default duration: 15 seconds unless the user specifies otherwise.
 - Default aspect ratio: match the user's target. If absent, choose 16:9 for cinematic/ad work and 9:16 for Shorts/TikTok/Reels.
 - Default output: Korean director notes plus model-ready prompt blocks. Add an English prompt block when useful for generation quality.
-- Reference assets: describe them in natural language unless the user provides an exact UI reference notation.
+- Reference assets: if the target Seedance surface supports explicit asset notation such as `@Image 1`, `@Video 1`, or `@Audio 1`, use it when it improves binding clarity; otherwise describe assets in natural language.
 - Seed strategy: for series, lock/reuse; for one-off clips, record the first successful seed if available.
+- Official capability note: Seedance 2.0 officially supports text, image, audio, and video input; mixed-modality reference can combine up to 9 images, 3 video clips, and 3 audio clips in one generation flow.
+- Official capability note: Seedance 2.0 officially emphasizes 15-second multi-shot audio-video output, dual-channel audio, prompt-driven camera planning, extension, editing, and native 1080p availability on official surfaces.
 
 ## Workflow
 

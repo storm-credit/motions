@@ -23,6 +23,9 @@ Style may expand, continuity may not drift. Sora prompts can be expressive, but 
 - Final output must be copy/paste usable by a human operator, with no explanatory preamble unless the user asks for rationale.
 - For 5-10 second briefs, compress the concept into one clear visual beat with a beginning image, one physical action, and one ending image.
 - If the user explicitly asks for Version A and Version B, provide both; Version B is optional only when the user did not request alternatives.
+- If targeting OpenAI's official Videos API, choose the control path explicitly: prompt-only, `input_reference` for opening-frame guidance, `characters` for reusable non-human subjects, `extensions` for continuity, and `edits` for targeted revisions.
+- If targeting OpenAI's official Videos API, remember the official constraints: real people and public figures cannot be generated, input images with human faces are currently rejected, copyrighted characters and copyrighted music are rejected, and human-likeness character uploads are blocked by default.
+- If targeting OpenAI's official Videos API, remember that `sora-2` is the faster exploration model and `sora-2-pro` is the higher-fidelity model for production-quality output and 1080p exports. The official Sora 2 Videos API is also deprecated and scheduled to shut down on September 24, 2026.
 
 ## Workflow
 
@@ -33,6 +36,7 @@ Create:
 - Core image: the one unforgettable frame.
 - Subject lock: character, wardrobe, signature detail.
 - World lock: location, time, weather, light.
+- Control path: prompt-only, input reference, character asset, extension, or edit.
 - Motion/physics: how bodies, fabric, objects, and camera move.
 - Emotional arc.
 - Visual language.
@@ -116,6 +120,7 @@ Ending image:
 - Make the ending image precise.
 - Use style as direction, not as a replacement for action.
 - Version B should change camera/style/emphasis, not core continuity facts.
+- In the official API, `input_reference` controls the opening frame of a single generation, `characters` preserve reusable non-human subjects across generations, and extensions preserve scene continuity but do not accept characters or image references.
 
 ## Mandatory Prompt Quality Bar
 

@@ -17,10 +17,13 @@ Motion continuity first. Kling prompts should make the same subject continue the
 
 - Use the platform-supported duration requested by the user. If absent, plan short clips that can be extended.
 - Use 16:9 for cinematic work, 9:16 for shorts, unless the user specifies.
+- If one generation should cover several cuts, prefer Kling VIDEO 3.0 `Multi-Shot` or `Custom Multi-Shot` instead of forcing a single-shot prompt.
 - If reference images/videos exist, define each asset's role: element, start frame, end frame, motion reference, style reference, or edit source.
+- Kling VIDEO 3.0 supports native audio and multilingual character speech; include speaking-character clarity when audio matters.
 - If motion is hard to describe in text, create a `Motion Control Handoff`.
 - If a generated clip is mostly good, prefer `Kling O1 Edit / Kling 01 Edit` over full regeneration.
 - For one-line briefs with no references, synthesize a minimal usable packet: one subject lock, one start pose, one action path, one end pose, one camera direction, one negative prompt, and one fallback edit path.
+- Official continuation note: Kling extensions typically add 4-5 seconds per step and can continue up to 3 minutes total, so preserve end-state precision.
 
 ## Workflow
 
@@ -37,6 +40,8 @@ Create:
 - Negative constraints.
 
 For multiple uploads, make an explicit asset inventory that maps each file to exactly one primary role before writing the prompt.
+
+If using Kling Motion Control with facial element binding, remember that the element library uses facial information only. It does not preserve clothing, hairstyle, makeup, or props by itself, so route wardrobe and prop continuity through the base generation plan or edit pass.
 
 ### 2. Shot / Extension Plan Block
 
@@ -94,8 +99,9 @@ For extension chains, each extension prompt must begin from the previous clip's 
 - Write motion as a chain of physical verbs, not just mood words.
 - Always specify where the body/prop/camera starts and ends.
 - Preserve screen direction unless a motivated turn is described.
+- For Start and End Frames, keep the two images as similar as possible; large differences can trigger an unwanted shot switch.
 - Use start/end frame logic for transitions when available.
-- Use extension prompts that begin from the previous ending state.
+- Use extension prompts that begin from the previous ending state and usually follow the formula `Subject + Movement`.
 - Use negative prompts against identity drift, object morphing, warped hands, outfit changes, camera-axis flips, and impossible motion.
 
 ## Mandatory Prompt Quality Bar
