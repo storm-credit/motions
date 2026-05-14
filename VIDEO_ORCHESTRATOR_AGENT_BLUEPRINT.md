@@ -600,11 +600,48 @@ Risks:
 - 연속성 앵커
 - 모델 후보
 
-### Step 4. Model Assignment
+### Step 4. Readiness Report
+
+오케스트라가 실제 실행 전에 `GO / HOLD / REVISE`를 판단한다.
+
+반드시 기록할 것:
+
+- 장면 기능 / dramatic question
+- 성공 조건
+- 입력 완성도
+- 에셋 준비 상태
+- 커버리지 공백
+- 권리 / 정책 리스크
+- 연속성 리스크
+
+### Step 5. Specialist Reports
+
+각 전문가가 자기 관점의 보고서를 낸다.
+
+- 뮤비 전문가: 곡 구조, 후렴 고정샷, 퍼포먼스 커버리지
+- 영화 전문가: dramatic beat, coverage, blocking, editorial logic
+- 애니 전문가: 스타일 잠금, 모델 시트, 포즈/실루엣/라인 안정성
+- 모델 전문가: 모델 적합성, 실패 리스크, 폴백 경로
+
+### Step 6. Orchestra Execution Plan
+
+오케스트라가 보고서를 모아 실행 계획을 고정한다.
+
+반드시 포함할 것:
+
+- 실행 순서
+- 샷 소유자
+- 모델/도구
+- 의존성
+- 프리비즈 승격 기준
+- 리페어 vs 재생성 기준
+- 최종 납품 게이트
+
+### Step 7. Model Assignment
 
 라우팅 매트릭스를 기준으로 샷마다 담당 모델을 배정한다.
 
-### Step 5. Specialist Prompt Draft
+### Step 8. Specialist Prompt Draft
 
 각 전문 에이전트가 자기 샷의 모델별 프롬프트를 작성한다.
 
@@ -614,7 +651,7 @@ Risks:
 - 자기 샷의 입력/출력 상태만 정확히 쓴다.
 - 모델별 한계를 명시한다.
 
-### Step 6. Orchestrator Arbitration
+### Step 9. Orchestrator Arbitration
 
 오케스트라가 모든 샷을 검토한다.
 
@@ -626,7 +663,7 @@ Risks:
 - 감정선이 뒤집히지 않는가
 - 모델별 프롬프트가 서로 충돌하지 않는가
 
-### Step 7. Previz
+### Step 10. Previz
 
 저비용/빠른 모델로 먼저 테스트한다.
 
@@ -636,7 +673,7 @@ Risks:
 - `Seedance 1.5 Pro`
 - `Wan 2.7`
 
-### Step 8. Hero Generation
+### Step 11. Hero Generation
 
 좋은 샷만 메인 모델로 승격한다.
 
@@ -647,7 +684,7 @@ Risks:
 - `Google Veo 3.1`
 - `Sora 2`
 
-### Step 9. Repair / Motion / DOP
+### Step 12. Repair / Motion / DOP
 
 문제가 있는 샷만 도구 레이어로 보낸다.
 
@@ -656,7 +693,17 @@ Risks:
 - 카메라/VFX 약함: `Higgsfield DOP`
 - 편집/조립: `Mixed Media` 또는 `Edit Video`
 
-### Step 10. Final Audit
+### Step 13. Final Delivery Gate
+
+최종 납품 전 오케스트라가 아래를 승인한다.
+
+- 권리 / 정책 통과
+- 후렴/리프레인 매칭 통과
+- 마스터 / 소셜 리프레임 통과
+- 남은 WARN 수용 여부
+- 최종 조립 순서 통과
+
+### Step 14. Final Audit
 
 최종 출력 전 `Continuity Audit`을 수행한다.
 
@@ -801,13 +848,22 @@ Do not:
 1. Continuity Bible
 [locked project bible]
 
-2. Shot Timeline
+2. Readiness Report
+[GO / HOLD / REVISE plus blockers]
+
+3. Specialist Reports
+[creative + model specialist reports]
+
+4. Orchestra Execution Plan
+[execution order, ownership, gates]
+
+5. Shot Timeline
 [shot-by-shot timeline]
 
-3. Model Assignment
+6. Model Assignment
 [shot -> model/tool -> reason -> fallback]
 
-4. Model-Ready Prompts
+7. Model-Ready Prompts
 
 Seedance 2.0:
 [prompts]
@@ -824,10 +880,13 @@ Sora 2:
 Tool Layer:
 [motion/edit/dop instructions]
 
-5. Continuity Audit
+8. Execution Gates
+[gate checklist]
+
+9. Continuity Audit
 [checklist results]
 
-6. Next Action
+10. Next Action
 [what the user should generate first]
 ```
 
@@ -893,6 +952,9 @@ Brief -> Orchestrator -> one best model -> final prompt
 ```text
 Brief
 -> Continuity Bible
+-> Readiness Report
+-> Specialist Reports
+-> Orchestra Execution Plan
 -> Shot Specs
 -> Model Assignment
 -> Specialist Drafts

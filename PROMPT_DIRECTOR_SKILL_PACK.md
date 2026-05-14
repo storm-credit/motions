@@ -87,10 +87,15 @@ Deep lane is used only when structural ambiguity or release risk is high.
 ```text
 Idea
 -> video-orchestrator if model is unknown
+-> readiness report
+-> specialist reports
+-> orchestra execution plan
+-> pass plan
 -> selected prompt director
 -> paste-ready prompt packet
 -> generation
 -> repair with Kling Edit / Motion Control / DOP if needed
+-> final delivery gate
 ```
 
 ## Current Director Roles

@@ -8,6 +8,15 @@ What changes for the character by the end of the shot or scene?
 
 ## Required Packet Additions
 
+Before planning, require a film readiness report with:
+
+- `scene_function`
+- `dramatic_question`
+- `success_condition`
+- `coverage_gap_report`
+- `continuity_risk_register`
+- `go / hold / revise`
+
 ### Narrative Beat Sheet
 
 - `scene_id`
@@ -114,3 +123,11 @@ Defaults:
 - Eyelines match.
 - Prop hand continuity holds.
 - Light motivation remains legal across cuts.
+
+## Film Execution Gates
+
+- `Readiness gate`: no full plan until dramatic objective, assets, and coverage risks are explicit.
+- `Coverage gate`: opener, pivot, payoff, button, and reveal safety are assigned.
+- `Previz gate`: blocking, eyelines, screen direction, and cut logic work in cheap previews.
+- `Shot pass gate`: continuity, performance, composition, and editorial usability all pass.
+- `Assembly gate`: the scene cuts cleanly before release.

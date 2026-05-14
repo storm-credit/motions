@@ -337,6 +337,225 @@ Do not:
 - Add new props unless approved by the Orchestrator.
 ```
 
+## Specialist Report
+
+```text
+=== SPECIALIST REPORT ===
+
+Specialist:
+Role:
+Creative mode:
+Owned shots / passes:
+
+Primary objective:
+- 
+
+Required locks:
+- 
+
+Recommended model/tool:
+- Primary:
+- Fallback:
+
+Main risks:
+- 
+
+Avoid:
+- 
+
+Success criteria:
+- 
+```
+
+## Readiness Report
+
+```text
+=== READINESS REPORT ===
+
+Status:
+Owner:
+Version:
+Review date:
+
+Scene function / dramatic question:
+Success condition:
+
+Input completeness:
+- Known facts:
+- Assumptions:
+- Unknowns:
+- Blockers:
+- Defaults used:
+
+Asset readiness:
+- Asset:
+  - Status: approved / proxy / missing
+  - Allowed uses:
+  - Missing prep:
+
+Coverage gap report:
+- Opener:
+- Pivot:
+- Payoff:
+- Button:
+- Insert / reaction safety:
+
+Continuity risk register:
+- Axis:
+- Eyeline:
+- Prop hand:
+- Wardrobe:
+- Light direction:
+- Geography:
+- Performer match:
+
+Model feasibility:
+- Primary route:
+- Failure risk:
+- Simplify or split needed:
+
+Decision:
+- GO / HOLD / REVISE
+- Reason:
+
+For music video mode, also include:
+- Music source report:
+- Asset readiness report:
+- Rights policy report:
+- Assumptions and blockers:
+- Success targets:
+```
+
+## Orchestra Execution Plan
+
+```text
+=== ORCHESTRA EXECUTION PLAN ===
+
+Goal:
+Delivery target:
+Creative Director Mode:
+Why this route:
+
+Active specialists:
+- Specialist:
+  - Why active:
+  - Owns:
+
+Execution order:
+1. Previz:
+2. First-pass generation:
+3. Hero pass:
+4. Motion / extension:
+5. Edit / repair:
+6. Final assembly:
+
+Shot ownership:
+- Shot ID:
+  - Owner:
+  - Model/tool:
+  - Fallback:
+  - Editorial role:
+
+Dependencies:
+- 
+
+Conflict resolutions:
+- 
+
+Stop conditions:
+- 
+
+For music video mode, also include:
+- Execution board:
+  - Section / Shot:
+  - Owner:
+  - Model/tool:
+  - Fallback order:
+  - Dependency assets:
+  - First-pass vs hero pass:
+  - Repair owner:
+  - Stop condition:
+```
+
+## Pass Plan
+
+```text
+=== PASS PLAN ===
+
+Shot ID:
+- Coverage tier: hero / safety / pickup / expendable
+- Dependencies:
+- Previz owner:
+- Hero owner:
+- Repair owner:
+- Assembly owner:
+
+Acceptance criteria:
+- Previz pass:
+- Hero pass:
+- Repair pass:
+- Assembly pass:
+
+Retake policy:
+- Max attempts:
+- Repair threshold:
+- Regenerate threshold:
+- Escalation path:
+```
+
+## Execution Gates
+
+```text
+=== EXECUTION GATES ===
+
+Rights gate:
+- Performer rights confirmed?
+- Track / asset rights confirmed?
+- Platform safety constraints legal?
+
+Continuity gate:
+- Character / wardrobe / prop locks complete?
+- Start/end baton states complete?
+- Delivery variants complete?
+
+Capability gate:
+- Chosen model supports the required input path?
+- Required reference path is legal?
+- Required resolution / aspect / duration are legal?
+
+Previz gate:
+- Cheap preview route defined?
+- Success / failure signal defined?
+
+Hero gate:
+- Premium shots identified?
+- Approval owner defined?
+
+Repair gate:
+- Edit fallback defined?
+- Motion fallback defined?
+- Replacement shot fallback defined?
+
+Final gate:
+- Assembly order locked?
+- Final audit owner assigned?
+```
+
+## Execution Log
+
+```text
+=== EXECUTION LOG ===
+
+Shot ID:
+- Current state: queued / previz pass / hero pass / repair / locked
+- Last owner:
+- Last action:
+- Result:
+- Defects found:
+- Delta from previous pass:
+- Next step:
+```
+
 ## Final Prompt Packet
 
 ```text
@@ -348,22 +567,31 @@ Do not:
 2. Creative Director Mode
 [music video / film / animation plus specialist notes]
 
-3. Shot Timeline
+3. Specialist Reports
+[creative specialist + model specialist reports]
+
+4. Orchestra Execution Plan
+[execution order, ownership, dependencies, stop conditions]
+
+5. Shot Timeline
 [shot-by-shot timeline]
 
-4. Model Assignment
+6. Model Assignment
 [shot -> model/tool -> reason -> fallback]
 
-5. Model-Ready Prompts
+7. Model-Ready Prompts
 [only selected models, not every model by default]
 
-6. Tool / Edit / Motion Passes
+8. Tool / Edit / Motion Passes
 [motion/edit/dop instructions if needed]
 
-7. Continuity Audit
+9. Execution Gates
+[gate checklist before final generation]
+
+10. Continuity Audit
 [checklist results]
 
-8. Next Action
+11. Next Action
 [what to generate first]
 ```
 

@@ -8,6 +8,14 @@ What stylization rules make this world readable and stable from shot to shot?
 
 ## Required Packet Additions
 
+Before planning, require an animation readiness report with:
+
+- `status / decision`
+- `input completeness`
+- `asset readiness`
+- `shot health`
+- `go / hold / revise`
+
 ### Animation Look Bible
 
 - `animation_family`
@@ -85,3 +93,11 @@ Defaults:
 - No rig break, joint pop, or parallax mismatch.
 - No prop-scale drift.
 - No silent fallback into photoreal live action.
+
+## Animation Execution Gates
+
+- `Report -> Plan`: block planning until blockers, assumptions, and asset gaps are acknowledged.
+- `Plan -> Previz`: block generation until animatic/storyboard, bridge states, route, and acceptance criteria are locked.
+- `Previz -> Hero`: promote only shots that pass timing, silhouette clarity, continuity bridge, and style-drift checks.
+- `Hero -> Repair / Assemble`: classify defects first, then decide repair versus regeneration.
+- `Final Release`: require continuity, editorial, audio, export, aspect-safe, and accepted residual-warning signoff.

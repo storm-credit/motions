@@ -8,6 +8,19 @@ What musical section is this clip serving, and what visual payoff lands on the b
 
 ## Required Packet Additions
 
+Before planning, require an MV readiness report with:
+
+- `music_source_report`
+- `track_source`
+- `rights_status`
+- `section_map readiness`
+- `asset_readiness_report`
+- `rights_policy_report`
+- `assumptions_and_blockers`
+- `success_targets`
+- `performance coverage gaps`
+- `go / hold / revise`
+
 ### Music Structure
 
 - `track_source`
@@ -45,6 +58,8 @@ Defaults:
 - `fallback_cutaway: insert/profile`
 - For choreography-led choruses, `full_body_required: yes`
 
+These fields should be mandatory in the actual shot plan, not only advisory notes.
+
 ### Refrain Plan
 
 - `chorus_anchor_shot_id`
@@ -73,6 +88,21 @@ Defaults:
 Default:
 
 - If the output may be cut down for Reels, Shorts, or TikTok, block every hero performance shot to survive a 9:16 crop even when the master is 16:9.
+- Add a per-shot `delivery_blocking_plan` when social reframing is expected.
+
+## Execution Board
+
+For each section or shot, track:
+
+- `owner`
+- `model/tool`
+- `fallback order`
+- `dependency assets`
+- `first-pass vs hero pass`
+- `repair owner`
+- `stop condition`
+
+These fields should be mandatory in the Orchestra Execution Plan for MV mode.
 
 ### Rights / Eligibility
 
@@ -102,3 +132,15 @@ Default:
 - Lyric-critical lines do not land on weak-sync coverage.
 - Dance shots preserve feet visibility and travel direction.
 - Repeated chorus shots match wardrobe, hair, light, and camera language unless the escalation is intentional.
+
+## Music Video Execution Gates
+
+- `Report gate`: no planning until music source, rights, and missing refs are resolved.
+- `Readiness gate`: track rights, performer rights, section map, and coverage gaps are explicit.
+- `Beat-lock gate`: freeze section map, chorus anchor, sync priority, and movement signature before specialist prompting.
+- `Performance gate`: lyric-critical and choreography-critical lines have proper coverage.
+- `Previz promotion gate`: beat accents, lyric-sync coverage, crop-safe blocking, feet/hands visibility, and refrain matching survive the preview pass.
+- `Hero gate`: chorus hooks and hero inserts are explicitly promoted.
+- `Repair-vs-regenerate gate`: salvage threshold and exact fallback path are explicit by failure type.
+- `Final delivery gate`: chorus-match locks, thumbnail and loop-out selection, master/social reframes, and accepted WARNs are approved.
+- `Assembly gate`: every clip has an editorial slot and cut logic before release.

@@ -11,8 +11,10 @@ The priority order is:
 
 1. Preserve continuity.
 2. Pick the smallest useful model/tool set.
-3. Produce model-ready prompts.
-4. Define repair/fallback paths before expensive regeneration.
+3. Collect expert reports before locking execution.
+4. Produce a concrete execution plan.
+5. Produce model-ready prompts.
+6. Define repair/fallback paths before expensive regeneration.
 
 ## Core Rule
 
@@ -103,7 +105,51 @@ Create shot specs with:
 
 Keep each shot simple enough for the chosen model.
 
-### 4. Route Models
+### 4. Collect Specialist Reports
+
+Before locking the route, gather concise reports from the relevant specialists:
+
+- One `creative specialist`: `Music Video Director`, `Film Director`, or `Animation Director`
+- One or more `model specialists`: `Seedance Director`, `Kling Director`, `Veo Director`, `Sora Director`
+
+Every report should say:
+
+- Status / decision: `GO`, `HOLD`, or `REVISE`
+- Scene function or dramatic question
+- Asset readiness and what is missing
+- Coverage gaps and continuity risks
+- What this specialist owns
+- What must be preserved
+- What is risky
+- What model/tool is recommended
+- What should be avoided
+- What fallback they want if generation fails
+
+Use `references/orchestra-report-plan-execute.md` for the full report schema.
+
+### 5. Build Orchestra Plan
+
+Turn the reports into one execution plan before writing final prompts.
+
+The plan must define:
+
+- Goal and delivery target
+- Active specialists and why they are active
+- Shot ownership by specialist/model
+- Generation order
+- Dependency graph
+- Coverage tiers: hero / safety / pickup / expendable
+- Previz path
+- Hero-generation path
+- Repair/edit/motion passes
+- Acceptance criteria for previz, hero, repair, and assembly
+- Gating checks before expensive final output
+
+If multiple specialists disagree, the Orchestrator resolves the conflict and records the reason.
+
+Do not move forward if the readiness report says `HOLD` unless the blocker is explicitly resolved.
+
+### 6. Route Models
 
 Use the smallest effective route:
 
@@ -121,22 +167,28 @@ For internal orchestra execution and review-lane efficiency, read `references/re
 
 Defer final model-specific constraints to the dedicated prompt director skills, which may be tightened against official product docs more frequently than the top-level router.
 
-### 5. Produce Prompt Packet
+### 7. Produce Prompt Packet
 
 Return a packet in this order:
 
 1. `Continuity Bible`
 2. `Creative Director Mode`
-3. `Shot Timeline`
-4. `Model Assignment`
-5. `Model-Ready Prompts`
-6. `Tool / Edit / Motion Passes`
-7. `Continuity Audit`
-8. `Next Action`
+3. `Readiness Report`
+4. `Specialist Reports`
+5. `Orchestra Execution Plan`
+6. `Pass Plan`
+7. `Shot Timeline`
+8. `Model Assignment`
+9. `Model-Ready Prompts`
+10. `Tool / Edit / Motion Passes`
+11. `Execution Gates`
+12. `Execution Log`
+13. `Continuity Audit`
+14. `Next Action`
 
 Do not produce every model's prompt by default. Produce only the selected route, plus one fallback if useful.
 
-### 6. Audit
+### 8. Audit
 
 Before final output, verify:
 
@@ -148,6 +200,10 @@ Before final output, verify:
 - Prompt does not contain contradictory instructions.
 - Model choice matches the shot purpose.
 - Creative Director Mode is explicit and consistent across the packet.
+- Readiness status is explicit: `GO`, `HOLD`, or `REVISE`.
+- Specialist reports are reflected in the final route instead of being ignored.
+- The Orchestra Execution Plan has a clear order and owner for every important shot or pass.
+- Every pass has acceptance criteria before promotion to the next stage.
 - Repair/fallback path is clear.
 
 ## Output Style
