@@ -42,11 +42,12 @@ Create:
 
 - World: genre, tone, grade, palette.
 - Protagonist/key characters: face type, body type, wardrobe lock, signature detail.
-- Reference inventory: bind every image/video/audio asset to a role such as character, wardrobe, prop, vehicle, motion, mood, or audio.
+- Hook strategy: 0-0.5s stinger, 0.5-1.5s dissonance, 1.5s+ payoff setup.
+- Reference inventory: for every uploaded asset, record `Type`, `Bound role`, `Must preserve`, and `Can ignore`, then bind it to a role such as character, wardrobe, prop, vehicle, motion, mood, or audio.
 - Time: time of day, weather, light direction.
 - Space: location, 180-degree line, foreground/midground/background.
 - Props/motifs: continuity anchors.
-- Audio 3-layer: opening stinger, rhythm beat/BPM, ending tail.
+- Audio 3-layer: opening stinger, rhythm beat, BPM, dialogue timing, beat-aligned cut notes, ending tail.
 - Negative constraints: text, logos, face/body defects, wardrobe flicker, light drift, prop pop-in, AI plastic skin.
 - Ending bridge state.
 
@@ -91,9 +92,21 @@ SEGMENT 1 ([time range])
 - 참조 에셋 처리:
 - 시드 전략:
 
+━━━ Hook Strategy ━━━
+- 0-0.5s:
+- 0.5-1.5s:
+- 1.5s+:
+
+━━━ Reference Inventory ━━━
+- Asset 1: Type / Bound role / Must preserve / Can ignore
+- Asset 2: Type / Bound role / Must preserve / Can ignore
+
 ━━━ 오디오 3레이어 ━━━
 - Opening stinger:
 - Rhythm beat:
+- BPM:
+- Dialogue timing:
+- Beat-aligned cut notes:
 - Ending tail:
 - Dialogue:
 
@@ -115,7 +128,7 @@ SEGMENT 1 ([time range])
 [exact pose, camera, light, prop positions]
 
 【 English Block 】
-[same structure in English when needed]
+[same structure in English when needed, including Hook Strategy, Reference Inventory, and BPM/timing details]
 
 === ENERGY ARC + CONTINUITY AUDIT ===
 [audit]
@@ -139,6 +152,8 @@ For a 30-second brief, default to two 15-second segments unless the user request
 The final block must be directly usable by a human operator. Include:
 
 - Technical parameters.
+- Hook strategy.
+- Reference inventory with per-asset fields.
 - Reference asset handling in natural language.
 - Per-scene prompts with timecodes.
 - Negative prompt.

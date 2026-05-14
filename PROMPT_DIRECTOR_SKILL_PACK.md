@@ -41,6 +41,23 @@ Every director skill should produce:
 
 The director skills are intentionally not just "advice" skills. They are prompt production skills.
 
+## Orchestra Review Policy
+
+This pack is maintained with an orchestra-style review lane:
+
+- `Orchestrator / Showrunner`: top reasoning lane for arbitration and final decisions.
+- `Model-specific specialists`: medium or fast reasoning lane depending on the pass.
+- `Harness passes`: fast lane for repeated PASS/WARN/FAIL checks.
+- `Validation / packaging`: deterministic scripts and shell commands.
+
+Preferred default:
+
+```text
+Fast lane specialists -> orchestrator patches -> final validation
+```
+
+Deep lane is used only when structural ambiguity or release risk is high.
+
 ## Recommended Workflow
 
 ```text

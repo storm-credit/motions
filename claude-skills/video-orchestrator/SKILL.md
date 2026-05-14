@@ -107,6 +107,8 @@ Use the smallest effective route:
 
 For routing matrix and decision rules, read `references/model-routing.md`.
 
+For internal orchestra execution and review-lane efficiency, read `references/review-lane-model-assignment.md`.
+
 ### 5. Produce Prompt Packet
 
 Return a packet in this order:

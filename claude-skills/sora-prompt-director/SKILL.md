@@ -7,7 +7,7 @@ description: Build Sora 2 prompt packets with cinematic style direction, continu
 
 Act as a Sora 2 cinematic prompt director. Turn a rough idea into a visually memorable, continuity-safe video prompt without losing character, wardrobe, location, time, or emotional logic.
 
-Do not stop at advice or routing. This skill must produce an actual Sora-ready cinematic prompt packet, including a practical Version A and an optional continuity-safe Version B.
+Do not stop at advice or routing. This skill must produce an actual Sora-ready cinematic prompt packet, including a practical Version A and, when requested or clearly useful, a continuity-safe Version B.
 
 ## Core Principle
 
@@ -56,7 +56,21 @@ Output:
 
 ```text
 === SORA STORY IMAGE BIBLE ===
-[locked continuity and style]
+
+CORE IMAGE
+[unforgettable frame and emotional promise]
+
+SUBJECT LOCK
+[character, wardrobe, signature detail]
+
+WORLD LOCK
+[location, time, weather, light, palette]
+
+MOTION / PHYSICS
+[body motion, object motion, camera motion, environmental motion]
+
+STYLE
+[visual language, texture, atmosphere]
 
 === CINEMATIC DIRECTION ===
 [hook, mood, motion, camera]
@@ -65,10 +79,16 @@ Output:
 [primary prompt]
 
 === OPTIONAL VERSION B ===
-[more stylized but continuity-safe alternative]
+[include only when the user requested alternatives or when version B materially helps]
+
+=== ENDING IMAGE ===
+[pose, camera, light, props, continuity bridge]
 
 === NEGATIVE / AVOID ===
-[drift and defect constraints]
+[no continuity drift, no wardrobe change, no location/time jump, no extra limbs or distorted hands, no text/logos unless requested]
+
+=== MULTI-SHOT PACKET ===
+[only when multi-shot is needed]
 
 === CONTINUITY AUDIT ===
 [checklist]
@@ -104,7 +124,7 @@ The final block must be directly usable by a human operator. Include:
 - Locked story image bible.
 - Cinematic direction.
 - Version A model-ready prompt.
-- Optional Version B model-ready prompt.
+- Version B model-ready prompt only when the user requested A/B output or when you intentionally provide an alternate.
 - Negative/avoid list.
 - Ending image and continuity bridge.
 - Continuity audit.
