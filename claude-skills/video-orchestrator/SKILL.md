@@ -33,6 +33,7 @@ Use these as conceptual agents, not necessarily as separate runtime processes.
 - `Music Video Director`: Beat map, performance-versus-narrative balance, chorus/drop payoffs, lyric or dance emphasis.
 - `Film Director`: Dramatic objective, blocking geography, lens continuity, subtext, eyeline, and coverage logic.
 - `Animation Director`: Stylization lock, shape language, pose clarity, expression rhythm, and motion readability.
+- `Animation Camera Director`: Anime/stylized camera grammar, parallax staging, layout-safe movement, and multiplane depth control.
 
 When the user wants a full model-specific prompt director output, use the matching dedicated skill package: `seedance-prompt-director`, `kling-prompt-director`, `veo-prompt-director`, `omni-prompt-director`, or `sora-prompt-director`.
 
@@ -92,9 +93,11 @@ Also lock one primary `Creative Director Mode`: `music video`, `film`, or `anima
 - `music video`: define beat map, hook moment, performance-versus-narrative ratio, choreography or lyric-sync focus, and repeatable motif.
 - `film`: define dramatic objective, emotional turn, blocking geography, lens language, and cut motivation.
 - `animation`: define medium, render/stylization lock, silhouette rules, pose rhythm, and expression/mouth-sync strategy.
+- If animation, hybrid 2.5D, or camera choreography is a major selling point, also lock parallax policy, camera roll limits, and staging depth rules.
 
 For full schema, read `references/continuity-templates.md`.
 For detailed MV / film / animation specialist rules, read `references/creative-specialist-modes.md`, then load `references/music-video-director-mode.md`, `references/film-director-mode.md`, or `references/animation-director-mode.md` as needed.
+If animation staging, anime lens language, or parallax-heavy camera work is important, also read `references/animation-camera-director-mode.md`.
 
 ### 3. Break Into Shots
 
@@ -116,6 +119,7 @@ Keep each shot simple enough for the chosen model.
 Before locking the route, gather concise reports from the relevant specialists:
 
 - One `creative specialist`: `Music Video Director`, `Film Director`, or `Animation Director`
+- Optional `camera specialist`: `Animation Camera Director` when the project is animated, hybrid 2.5D, anime MV, layout-driven, or camera-led
 - One or more `model specialists`: `Seedance Director`, `Kling Director`, `Veo Director`, `Omni Director`, `Sora Director`
 
 Every report should say:
@@ -124,6 +128,7 @@ Every report should say:
 - Scene function or dramatic question
 - Asset readiness and what is missing
 - Coverage gaps and continuity risks
+- Which camera/staging rules are locked
 - What this specialist owns
 - What must be preserved
 - What is risky

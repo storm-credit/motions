@@ -87,6 +87,20 @@ CAMERA LANGUAGE
 - Forbidden camera moves:
 - Shot rhythm:
 
+ANIMATION CAMERA PACKAGE
+- Staging depth plan:
+- Parallax tiers:
+- Layout anchor:
+- Horizon rule:
+- Lens equivalent feel:
+- Roll limit:
+- Pan speed rule:
+- Push/pull rule:
+- Orbit legality:
+- Perspective distortion budget:
+- Foreground wipe policy:
+- Impact move policy:
+
 CINEMATOGRAPHY PACKAGE
 - Focal length eq:
 - Sensor feel:
@@ -263,6 +277,9 @@ Camera:
 - Movement:
 - Lens feeling:
 - Blocking:
+- Parallax:
+- Staging depth:
+- Roll rule:
 
 Audio:
 - Music cue:

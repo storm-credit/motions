@@ -91,6 +91,7 @@ Owned shots / passes:
 What this specialist wants:
 - Primary objective:
 - Required locks:
+- Locked camera / staging rules:
 - Preferred model/tool:
 - Preferred input path:
 
@@ -244,6 +245,7 @@ Shot ID:
 
 - `Orchestrator / Showrunner`: final plan, conflict resolution, gating, and sign-off
 - `Creative specialist`: genre-specific report and performance/cut logic
+- `Animation Camera Director`: animation-specific camera grammar, parallax legality, staging depth, and layout-safe move rules
 - `Model specialist`: model-specific prompt/report for owned shots, including Omni for surface-driven multimodal edit chains
 - `Tool layer`: only executes repair, motion, DOP, or assembly tasks after the plan chooses them
 

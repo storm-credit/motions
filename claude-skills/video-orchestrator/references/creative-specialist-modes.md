@@ -14,6 +14,8 @@ Add a secondary mode only when the user explicitly blends formats, such as `anim
 
 The creative specialist never replaces the model specialist. It shapes the packet by adding the right directing priorities, timing logic, and audit rules.
 
+When the primary mode is `animation`, add `Animation Camera Director` as a secondary specialist whenever the camera move, staging depth, parallax, or layout readability is one of the main selling points.
+
 Every final packet should explicitly say:
 
 ```text
@@ -132,11 +134,53 @@ Audit checks:
 - Are exaggeration and effects intentional rather than random artifacts?
 - Is expression intensity consistent with the chosen animation mode?
 
+## Animation Camera Director
+
+Use when:
+
+- The project is anime, stylized action, hybrid 2.5D, motion-design-heavy, or layout-driven.
+- Camera movement, multiplane depth, parallax, or board-style staging is part of the pitch, not just a generic move.
+- The user wants "anime camera", "animation camera", "parallax-heavy", "layout-safe action", or "storyboard-like" direction.
+
+Core question:
+
+- What camera grammar makes this stylized world feel dynamic without breaking layout, silhouette, or multiplane depth?
+
+For the full camera schema, read `animation-camera-director-mode.md`.
+
+Required additions:
+
+- `Staging depth plan`
+- `Parallax tiers`
+- `Lens-equivalent feeling`
+- `Roll limit`
+- `Camera move legality`
+- `Foreground wipe policy`
+- `Impact move policy`
+- `Layout anchor`
+
+Model emphasis:
+
+- `Kling`: strongest when readable action arcs, staging continuity, and camera/action synchronization are critical
+- `Veo`: strongest for one premium stylized hero move with clear start/end staging
+- `Sora`: strongest for aggressive stylized boards and unusual visual camera interpretation
+- `Omni`: strongest when the task is a conversational source-footage transform, animatic carry, or multimodal camera remix inside Flow surfaces
+- `Seedance`: strongest when the camera grammar must stay consistent across several music-led or sequence-led beats
+
+Audit checks:
+
+- Does the move preserve silhouette readability?
+- Is parallax intentional instead of wobbling randomly?
+- Do perspective distortion and roll stay inside the chosen style budget?
+- Is the camera move motivated by action, beat, or reveal instead of drifting decoratively?
+- Would the shot still make sense as a storyboard panel sequence?
+
 ## Hybrid Examples
 
 Use these only when the user clearly blends categories:
 
 - `animated music video`: primary `music video`, secondary `animation`
+- `animated music video` with strong camera choreography: primary `music video`, secondary `animation`, plus `Animation Camera Director`
 - `cinematic anime teaser`: primary `animation`, secondary `film`
 - `concert-film trailer`: primary `film`, secondary `music video`
 

@@ -16,6 +16,8 @@ Before planning, require an animation readiness report with:
 - `shot health`
 - `go / hold / revise`
 
+If camera motion, staged reveals, or multiplane depth are part of the selling point, activate `Animation Camera Director` and load `animation-camera-director-mode.md` before hero generation.
+
 ### Animation Look Bible
 
 - `animation_family`
@@ -71,11 +73,21 @@ Defaults:
 - `asset_priority`
 - `platform_binding_method`
 
+### Animation Camera Coordination
+
+- `animation_camera_package`
+- `staging_depth_plan`
+- `parallax_tiers`
+- `roll_limit`
+- `move_legality`
+- `layout_anchor`
+
 Defaults:
 
 - Every recurring hero should have at least `front + 3/4` coverage.
 - Every story-critical prop should have an ortho lock.
 - If visual sheets are missing, synthesize a text proxy and warn.
+- If the shot sells itself through camera choreography, do not approve hero generation until camera/staging rules are explicit.
 
 ## Routing Defaults
 
@@ -94,6 +106,7 @@ Defaults:
 - No rig break, joint pop, or parallax mismatch.
 - No prop-scale drift.
 - No silent fallback into photoreal live action.
+- No camera move that breaks layout readability for the chosen animation family.
 
 ## Animation Execution Gates
 

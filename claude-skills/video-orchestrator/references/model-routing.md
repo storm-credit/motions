@@ -44,6 +44,7 @@ Use this reference when selecting which available video model or tool should han
 | Physics / explainer motion | Gemini Omni Flash | Veo 3.1 | Google Flow Tools |
 | Distinct style version | Sora 2 | Veo 3.1 | Higgsfield DOP |
 | Motion/action continuity | Kling 3.0 | Seedance 2.0 | Kling Motion Control |
+| Stylized animation camera choreography | Kling 3.0 | Veo 3.1 | Higgsfield DOP |
 | Motion transfer | Kling Motion Control | Kling 3.0 | Kling Edit |
 | Local repair | Kling Edit | Edit Video | Mixed Media |
 | Fast previsualization | Veo 3.1 Lite | Seedance 1.5 Pro | Wan 2.7 |
@@ -64,6 +65,7 @@ Notes:
 - `Music video`: use Omni when the work is centered on conversational edits inside Flow Music or multimodal remixes tied to track structure.
 - `Film`: use Veo for short emotionally precise hero beats and Sora for strong cinematic interpretation; use Omni when the main task is transforming or iterating on source footage conversationally.
 - `Animation`: use Sora or Veo for stylized key-image direction, use Omni for style-shifting motion carry or multimodal explainers, then Kling when action readability or pose continuity needs reinforcement.
+- `Animation`: if parallax staging, anime lens language, or board-safe camera choreography is the selling point, activate `Animation Camera Director` as a secondary specialist before hero generation.
 
 ## Mode Selection
 
