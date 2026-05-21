@@ -113,6 +113,7 @@ Defaults:
 - `Seedance 2.0`: multi-shot narrative scenes with sound logic and baton states
 - `Kling 3.0`: entrances, exits, fight geography, and movement continuity
 - `Veo 3.1`: emotionally precise hero beats and frame-matched transitions
+- `Gemini Omni Flash`: source-footage transformations, conversational scene edits, and multimodal explainers that still need scene memory
 - `Sora 2`: atmosphere-heavy filmic alternates and memorable version B
 
 ## Audit

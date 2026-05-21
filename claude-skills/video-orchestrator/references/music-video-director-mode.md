@@ -37,6 +37,7 @@ Defaults:
 - If BPM is unknown, infer from supplied audio or use `120`.
 - If time signature is unknown, use `4/4`.
 - Every musical section must have at least one assigned visual function.
+- If the workflow is inside `Flow Music`, remember Google positions it alongside `Lyria 3 Pro`, which officially supports longer structural sections like intros, verses, choruses, and bridges.
 
 ### Performance Coverage
 
@@ -123,6 +124,7 @@ Default:
 - `Seedance 2.0`: base multi-shot MV segments, beat-map packets, audio-aware sequences
 - `Kling 3.0`: dance continuity, choreography extensions, movement stabilization
 - `Veo 3.1`: hero inserts, glamour closeups, emotional bridge lifts
+- `Gemini Omni Flash`: conversational multimodal remixes, Flow Music video direction, source-footage transformations tied to music sections
 - `Sora 2`: concept interludes, alternate worlds, stylized Version B
 
 ## Audit

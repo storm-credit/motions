@@ -244,7 +244,7 @@ Shot ID:
 
 - `Orchestrator / Showrunner`: final plan, conflict resolution, gating, and sign-off
 - `Creative specialist`: genre-specific report and performance/cut logic
-- `Model specialist`: model-specific prompt/report for owned shots
+- `Model specialist`: model-specific prompt/report for owned shots, including Omni for surface-driven multimodal edit chains
 - `Tool layer`: only executes repair, motion, DOP, or assembly tasks after the plan chooses them
 
 ## Anti-Patterns

@@ -26,6 +26,7 @@ As of `2026-05-14`, the model-specific prompt directors were re-checked against 
 - `Seedance 2.0`
 - `Kling 3.0`
 - `Google Veo 3.1`
+- `Gemini Omni Flash`
 - `Sora 2`
 
 See `OFFICIAL_DOC_SYNC_NOTES.md` for the exact sources reviewed and the capability/constraint changes that were tightened in the skills.
@@ -38,6 +39,7 @@ Upload these `.skill` packages individually when you want them available as sepa
 - `dist/seedance-prompt-director.skill`
 - `dist/kling-prompt-director.skill`
 - `dist/veo-prompt-director.skill`
+- `dist/omni-prompt-director.skill`
 - `dist/sora-prompt-director.skill`
 
 ## Intended Use
@@ -49,6 +51,7 @@ Use a specific director when the user already knows the target model:
 - Seedance-style multi-shot prompt packet: `seedance-prompt-director`
 - Kling-style motion/extension prompt packet: `kling-prompt-director`
 - Veo-style precise hero-shot prompt packet: `veo-prompt-director`
+- Omni-style multimodal edit-chain packet: `omni-prompt-director`
 - Sora-style cinematic visual prompt packet: `sora-prompt-director`
 
 ## Expected Output Pattern
@@ -105,6 +108,7 @@ Idea
 | `seedance-prompt-director` | Continuity-locked multi-shot Seedance 2.0 prompt packets |
 | `kling-prompt-director` | Motion-safe Kling 3.0 prompt packets and extension/edit handoffs |
 | `veo-prompt-director` | Precise Veo 3.1 hero-shot and first/last-frame prompt packets |
+| `omni-prompt-director` | Gemini Omni Flash multimodal prompt packets and conversational edit chains |
 | `sora-prompt-director` | Cinematic Sora 2 prompt packets with style-safe alternatives |
 
 ## Local Source

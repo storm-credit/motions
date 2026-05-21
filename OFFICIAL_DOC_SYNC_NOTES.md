@@ -1,6 +1,6 @@
 # Official Doc Sync Notes
 
-Last deep sync: `2026-05-14` (Asia/Seoul)
+Last deep sync: `2026-05-21` (Asia/Seoul)
 
 This file records the official-doc findings used to align the current prompt-director skill pack.
 
@@ -85,6 +85,29 @@ Key doc-derived constraints and capabilities:
 - Official API docs position `sora-2` for speed/iteration and `sora-2-pro` for higher fidelity / 1080p production output.
 - Official API docs state that the Sora 2 Videos API is deprecated and scheduled to shut down on `2026-09-24`.
 
+## Gemini Omni Flash
+
+Official sources reviewed:
+
+- [Introducing Gemini Omni](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/)
+- [Gemini Omni for Google Flow and Flow Music](https://blog.google/innovation-and-ai/models-and-research/google-labs/flow-updates/)
+- [Gemini app update with Gemini Omni](https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/)
+- [Lyria 3 Pro launch post](https://blog.google/innovation-and-ai/technology/ai/lyria-3-pro/)
+
+Key doc-derived constraints and capabilities:
+
+- Google officially announced a new `Gemini Omni` family, with `Gemini Omni Flash` as the first released model.
+- Omni is officially positioned as a model that can create from `any input`, starting with video.
+- Official blog says Omni can combine `images`, `audio`, `video`, and `text` as input to generate or edit video.
+- Official launch post says Omni supports conversational editing where each instruction builds on the last and the scene remembers prior turns.
+- Official blog highlights stronger world knowledge, improved intuitive physics, and knowledge-grounded explainers.
+- Official rollout surfaces are `Gemini app`, `Google Flow`, `YouTube Shorts`, and `YouTube Create`; Flow updates also announce Omni support for `Google Flow Music`.
+- Official Flow update says Omni Flash improves character consistency and preserves identity and voice across scenes in Flow.
+- Official launch post says `only voice references` are supported for audio references to start, with other audio input types rolling out later, so general audio-upload behavior should be treated as surface-dependent.
+- Official launch post says avatar videos start with `your own voice` through `Avatars`, while broader speech/audio editing is still being tested.
+- Official launch post says all Omni-generated videos include `SynthID`.
+- Official launch post says developer and enterprise APIs are coming `in the coming weeks`, so stable public API assumptions should be avoided unless newer official docs are supplied.
+
 ## How These Notes Were Applied
 
 These official-doc findings were used to tighten:
@@ -92,6 +115,7 @@ These official-doc findings were used to tighten:
 - `claude-skills/seedance-prompt-director`
 - `claude-skills/kling-prompt-director`
 - `claude-skills/veo-prompt-director`
+- `claude-skills/omni-prompt-director`
 - `claude-skills/sora-prompt-director`
 - `claude-skills/video-orchestrator`
 - `PROMPT_DIRECTOR_SKILL_PACK.md`

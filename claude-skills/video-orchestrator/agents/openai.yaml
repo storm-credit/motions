@@ -1,4 +1,4 @@
 interface:
   display_name: "Video Orchestrator"
-  short_description: "Coordinate AI video models with readiness reports, execution plans, and continuity-safe prompt routing."
-  default_prompt: "Turn this video idea into a readiness report, specialist-driven execution plan, and continuity-safe prompt packet."
+  short_description: "Coordinate Seedance, Kling, Veo, Omni, and Sora with readiness reports and execution plans."
+  default_prompt: "Turn this video idea into a readiness report, specialist-driven execution plan, and continuity-safe prompt packet across Seedance, Kling, Veo, Omni, or Sora."

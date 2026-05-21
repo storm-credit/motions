@@ -273,6 +273,7 @@ Model-specific notes:
 - Seedance:
 - Kling:
 - Veo:
+- Omni:
 - Sora:
 - Creative specialist note:
 

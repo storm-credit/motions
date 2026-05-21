@@ -1,0 +1,4 @@
+interface:
+  display_name: "Omni Prompt Director"
+  short_description: "Omni multimodal video prompts and edit chains."
+  default_prompt: "Turn this Omni video idea into a multimodal prompt packet and edit plan."

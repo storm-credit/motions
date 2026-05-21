@@ -1,6 +1,6 @@
 ---
 name: video-orchestrator
-description: Build continuity-safe AI video prompt packets and routing plans across Seedance 2.0, Kling 3.0, Google Veo 3.1, Sora 2, and related video tools. Use when the user asks to create, plan, compare, route, or refine AI-video prompts, short-form videos, music videos, ads, cinematic clips, multi-shot sequences, reference-image/video workflows, motion-control passes, editing passes, or a "video model orchestra" with multiple generators.
+description: Build continuity-safe AI video prompt packets and routing plans across Seedance 2.0, Kling 3.0, Google Veo 3.1, Gemini Omni Flash, Sora 2, and related video tools. Use when the user asks to create, plan, compare, route, or refine AI-video prompts, short-form videos, music videos, ads, cinematic clips, multi-shot sequences, reference-image/video workflows, conversational edit chains, motion-control passes, editing passes, or a "video model orchestra" with multiple generators.
 ---
 
 # Video Orchestrator
@@ -28,12 +28,13 @@ Use these as conceptual agents, not necessarily as separate runtime processes.
 - `Seedance Director`: Multi-shot, audio-aware, reference-heavy commercial shorts, ads, music-video sequences.
 - `Kling Director`: Motion continuity, element binding, start/end frame logic, extension, movement stabilization.
 - `Veo Director`: Short high-quality hero shots, first/last-frame transitions, precise cinematic moments.
+- `Omni Director`: Multimodal conversational video creation, footage transformation, motion remix, world-knowledge explainers, and Flow / Flow Music edit chains.
 - `Sora Director`: Style expansion, memorable visual alternatives, creative version B.
 - `Music Video Director`: Beat map, performance-versus-narrative balance, chorus/drop payoffs, lyric or dance emphasis.
 - `Film Director`: Dramatic objective, blocking geography, lens continuity, subtext, eyeline, and coverage logic.
 - `Animation Director`: Stylization lock, shape language, pose clarity, expression rhythm, and motion readability.
 
-When the user wants a full model-specific prompt director output, use the matching dedicated skill package: `seedance-prompt-director`, `kling-prompt-director`, `veo-prompt-director`, or `sora-prompt-director`.
+When the user wants a full model-specific prompt director output, use the matching dedicated skill package: `seedance-prompt-director`, `kling-prompt-director`, `veo-prompt-director`, `omni-prompt-director`, or `sora-prompt-director`.
 
 If the user says they want "Seedance-skill-style", "prompt director", "프롬프트 감독형", or a paste-ready prompt rather than a routing plan, do not stop at model selection. Route to the relevant model-specific prompt director and produce final prompt blocks.
 
@@ -51,6 +52,11 @@ Treat these as fallback or preview models unless the user explicitly requests th
 - `Wan 2.7`
 - `Minimax Hailuo 2.3`
 - `Grok Imagine`
+
+Treat `Gemini Omni Flash` as a surface-sensitive primary model:
+
+- Strong when the user wants conversational video editing, multimodal input blending, motion remixes from existing footage, explainers grounded in world knowledge, or Google Flow / Flow Music workflows.
+- Weak when the user requires a fully documented stable public API contract, deterministic motion control, or hard first/last-frame production guarantees.
 
 ## Workflow
 
@@ -110,7 +116,7 @@ Keep each shot simple enough for the chosen model.
 Before locking the route, gather concise reports from the relevant specialists:
 
 - One `creative specialist`: `Music Video Director`, `Film Director`, or `Animation Director`
-- One or more `model specialists`: `Seedance Director`, `Kling Director`, `Veo Director`, `Sora Director`
+- One or more `model specialists`: `Seedance Director`, `Kling Director`, `Veo Director`, `Omni Director`, `Sora Director`
 
 Every report should say:
 
@@ -156,6 +162,7 @@ Use the smallest effective route:
 - One simple clip: choose one best model.
 - Multi-shot sequence: start with Seedance or Kling.
 - Hero shot: use Veo or Sora.
+- Conversational footage transformation or multimodal remix: use Omni.
 - Motion reference: use Kling Motion Control.
 - Local repair: use Kling Edit.
 - Weak camera impact: use Higgsfield DOP.
@@ -166,6 +173,8 @@ For routing matrix and decision rules, read `references/model-routing.md`.
 For internal orchestra execution and review-lane efficiency, read `references/review-lane-model-assignment.md`.
 
 Defer final model-specific constraints to the dedicated prompt director skills, which may be tightened against official product docs more frequently than the top-level router.
+
+If routing to Omni, read `references/omni-official-surface-notes.md` before assuming any app surface or input type. Prefer a surface-ready turn plan over fake API parameters when the official API surface is not yet public or stable.
 
 ### 7. Produce Prompt Packet
 

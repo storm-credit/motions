@@ -9,6 +9,7 @@ Use this reference when selecting which available video model or tool should han
 | Seedance 2.0 | Multi-shot shorts, ads, music-video sequences, audio-aware prompt packets, reference-heavy scenes | A single ultra-precise hero shot is the only goal |
 | Kling 3.0 | Motion continuity, same-character movement, start/end frame logic, extension, element consistency | Audio-first whole-sequence design is more important than motion |
 | Google Veo 3.1 | Short cinematic hero shots, first/last frame transitions, precise emotional moments | Too many events must happen in one prompt |
+| Gemini Omni Flash | Conversational video editing, multimodal remix from text/image/video/audio, motion transformations from source footage, explainers, Flow / Flow Music workflows | You need a fully stable public API contract, deterministic motion control, or hard first/last-frame production guarantees |
 | Sora 2 | Creative style expansion, memorable visual alternative, version B, stylized cinematic interpretation | Strict object placement, product specs, or motion control are the top priority |
 
 ## Tool / Pipeline Layer
@@ -38,6 +39,9 @@ Use this reference when selecting which available video model or tool should han
 | Multi-shot short | Seedance 2.0 | Kling 3.0 | Cinema Studio / Edit Video |
 | Audio/dialogue sequence | Seedance 2.0 | Veo 3.1 | Mixed Media |
 | Hero shot | Veo 3.1 | Sora 2 | Higgsfield DOP |
+| Conversational scene edit | Gemini Omni Flash | Kling Edit | Google Flow |
+| Multimodal footage remix | Gemini Omni Flash | Sora 2 | Google Flow / Flow Music |
+| Physics / explainer motion | Gemini Omni Flash | Veo 3.1 | Google Flow Tools |
 | Distinct style version | Sora 2 | Veo 3.1 | Higgsfield DOP |
 | Motion/action continuity | Kling 3.0 | Seedance 2.0 | Kling Motion Control |
 | Motion transfer | Kling Motion Control | Kling 3.0 | Kling Edit |
@@ -57,8 +61,9 @@ Use this reference when selecting which available video model or tool should han
 Notes:
 
 - `Music video`: use Seedance when beat map, audio timing, or multi-shot musical progression is the backbone; add Kling when choreography continuity matters.
-- `Film`: use Veo for short emotionally precise hero beats and Sora for strong cinematic interpretation; use Seedance or Kling when the scene becomes multi-shot or movement-critical.
-- `Animation`: use Sora or Veo for stylized key-image direction, then Kling when action readability or pose continuity needs reinforcement.
+- `Music video`: use Omni when the work is centered on conversational edits inside Flow Music or multimodal remixes tied to track structure.
+- `Film`: use Veo for short emotionally precise hero beats and Sora for strong cinematic interpretation; use Omni when the main task is transforming or iterating on source footage conversationally.
+- `Animation`: use Sora or Veo for stylized key-image direction, use Omni for style-shifting motion carry or multimodal explainers, then Kling when action readability or pose continuity needs reinforcement.
 
 ## Mode Selection
 
@@ -82,6 +87,7 @@ Default choices:
 - Commercial short: Seedance 2.0.
 - Strong single shot: Veo 3.1.
 - Motion-focused shot: Kling 3.0.
+- Conversational remix or source-footage transformation: Gemini Omni Flash.
 - Style experiment: Sora 2.
 
 ### Full Orchestra Mode
@@ -111,6 +117,11 @@ Brief
 -> Final Assembly
 -> Audit
 ```
+
+Special note for Omni:
+
+- Because Omni is currently documented mainly on Google consumer/creative surfaces, prefer it when the operator is actually working inside Gemini app, Google Flow, Flow Music, YouTube Shorts, or YouTube Create.
+- If the operator needs a stable developer-facing API today, route to Veo / Seedance / Kling / Sora unless fresh official Omni API docs say otherwise.
 
 ## Anti-Patterns
 

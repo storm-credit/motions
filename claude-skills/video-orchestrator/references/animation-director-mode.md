@@ -82,6 +82,7 @@ Defaults:
 - `Seedance 2.0`: longer animated sequences with multimodal references and segment-level style locks
 - `Kling 3.0`: pose continuity, multi-angle element binding, and readable action arcs
 - `Veo 3.1`: stylized hero shots, asset-image-guided heroes, and extend plans
+- `Gemini Omni Flash`: style-shifting motion carry, multimodal animation explainers, and conversational source-footage transforms
 - `Sora 2`: stylized interpretation, alternate visual worlds, and non-human character asset control paths
 
 ## Audit
